@@ -109,8 +109,11 @@ root@trace1:strace-output# wc -l linux-vsp_files-accessed.txt
 So the full CentOS container running a little COBOL Hello World application needs access to six hundred thirty seven files, and CINC Auditor/InSpec running a 22-line profile directly on the OS needs to access over one hundred four thousand files. That doesn't directly mean that one is more or less of a security risk than the other, particularly given that a Hello World application can't report on the compliance state of your machines, containers, applications, et cetera, but it is fun to think about.
 
 TODO: super fun to remember what containers are actually doing via this output, isn't it?
+
 TODO: what can you do with this output in a pipeline
+
 TODO: call out processes which didn't access files - how do you dig into them?
+
 TODO: can one use this to run a profile without root? if not why does it matter?
 
 ## Parsing ebpftrace Output
