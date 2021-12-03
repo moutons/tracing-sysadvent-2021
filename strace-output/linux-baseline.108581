@@ -1,0 +1,11 @@
+stat("/usr/local/sbin/cmd.exe", 0x7ffd9045fde0) = -1 ENOENT (No such file or directory)
+stat("/usr/local/bin/cmd.exe", 0x7ffd9045fde0) = -1 ENOENT (No such file or directory)
+stat("/usr/sbin/cmd.exe", 0x7ffd9045fde0) = -1 ENOENT (No such file or directory)
+stat("/usr/bin/cmd.exe", 0x7ffd9045fde0) = -1 ENOENT (No such file or directory)
+stat("/sbin/cmd.exe", 0x7ffd9045fde0)   = -1 ENOENT (No such file or directory)
+stat("/bin/cmd.exe", 0x7ffd9045fde0)    = -1 ENOENT (No such file or directory)
+stat("/usr/games/cmd.exe", 0x7ffd9045fde0) = -1 ENOENT (No such file or directory)
+stat("/usr/local/games/cmd.exe", 0x7ffd9045fde0) = -1 ENOENT (No such file or directory)
+stat("/snap/bin/cmd.exe", 0x7ffd9045fde0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/proc/self/status", O_RDONLY|O_NOCTTY|O_CLOEXEC) = 5
++++ exited with 1 +++

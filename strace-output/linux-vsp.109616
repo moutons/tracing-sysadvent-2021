@@ -1,0 +1,10 @@
+stat("/usr/local/sbin/Get-WmiObject", 0x7ffe7e698c30) = -1 ENOENT (No such file or directory)
+stat("/usr/local/bin/Get-WmiObject", 0x7ffe7e698c30) = -1 ENOENT (No such file or directory)
+stat("/usr/sbin/Get-WmiObject", 0x7ffe7e698c30) = -1 ENOENT (No such file or directory)
+stat("/usr/bin/Get-WmiObject", 0x7ffe7e698c30) = -1 ENOENT (No such file or directory)
+stat("/sbin/Get-WmiObject", 0x7ffe7e698c30) = -1 ENOENT (No such file or directory)
+stat("/bin/Get-WmiObject", 0x7ffe7e698c30) = -1 ENOENT (No such file or directory)
+stat("/usr/games/Get-WmiObject", 0x7ffe7e698c30) = -1 ENOENT (No such file or directory)
+stat("/usr/local/games/Get-WmiObject", 0x7ffe7e698c30) = -1 ENOENT (No such file or directory)
+stat("/snap/bin/Get-WmiObject", 0x7ffe7e698c30) = -1 ENOENT (No such file or directory)
++++ exited with 127 +++
