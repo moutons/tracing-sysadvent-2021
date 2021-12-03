@@ -1,0 +1,12 @@
+
+---
+name: linux-vsp
+title: Very Simple Profile
+maintainer: Nobody should be maintaining this
+copyright: Shaun Mouton
+copyright_email: sdmouton@devops.christmas
+license: Apache-2.0
+summary: A basic profile for tracing
+version: 0.1.0
+supports:
+    - os-family: linux
