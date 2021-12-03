@@ -1,0 +1,80 @@
+execve("/usr/bin/crun", ["/usr/bin/crun", "delete", "--force", "a48322315fe15b9911ae4ff331c72139"...], 0xc0002eb030 /* 1 var */) = 0
+access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libcriu.so.2", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libsystemd.so.0", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libseccomp.so.2", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libdl.so.2", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libcap.so.2", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libyajl.so.2", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libprotobuf-c.so.1", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/librt.so.1", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/liblzma.so.5", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/liblz4.so.1", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libgcrypt.so.20", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libpthread.so.0", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libgpg-error.so.0", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/proc/self/exe", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/proc/self/cmdline", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/tmp/crun.mGeVF6", O_RDWR|O_CREAT|O_EXCL, 0600) = 3
+mount("/proc/self/exe", "/tmp/crun.mGeVF6", 0x5558544ec439, MS_BIND, 0x5558544ec439) = 0
+mount("", "/tmp/crun.mGeVF6", 0x5558544ec439, MS_RDONLY|MS_REMOUNT|MS_BIND, "") = 0
+openat(AT_FDCWD, "/tmp/crun.mGeVF6", O_RDONLY|O_CLOEXEC|O_PATH) = 3
+umount2("/tmp/crun.mGeVF6", MNT_DETACH) = 0
+unlink("/tmp/crun.mGeVF6")              = 0
+execveat(3, "", ["/usr/bin/crun", "delete", "--force", "a48322315fe15b9911ae4ff331c72139"...], 0x555854668370 /* 2 vars */, AT_EMPTY_PATH) = 0
+access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libcriu.so.2", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libsystemd.so.0", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libseccomp.so.2", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libdl.so.2", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libcap.so.2", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libyajl.so.2", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libprotobuf-c.so.1", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/librt.so.1", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/liblzma.so.5", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/liblz4.so.1", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libgcrypt.so.20", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libpthread.so.0", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libgpg-error.so.0", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/proc/self/exe", O_RDONLY|O_CLOEXEC) = 3
+mkdirat(AT_FDCWD, "/run/crun", 0700)    = -1 EEXIST (File exists)
+statx(AT_FDCWD, "/run/crun", AT_STATX_DONT_SYNC, STATX_TYPE, {stx_mask=STATX_BASIC_STATS, stx_attributes=0, stx_mode=S_IFDIR|0700, stx_size=60, ...}) = 0
+openat(AT_FDCWD, "/run/crun/a48322315fe15b9911ae4ff331c72139274a0135f452259161dfea4342490532/status", O_RDONLY) = 3
+statx(3, "", AT_STATX_DONT_SYNC|AT_SYMLINK_NOFOLLOW|AT_EMPTY_PATH, STATX_SIZE, {stx_mask=STATX_BASIC_STATS, stx_attributes=0, stx_mode=S_IFREG|0700, stx_size=731, ...}) = 0
+mkdirat(AT_FDCWD, "/run/crun", 0700)    = -1 EEXIST (File exists)
+statx(AT_FDCWD, "/run/crun", AT_STATX_DONT_SYNC, STATX_TYPE, {stx_mask=STATX_BASIC_STATS, stx_attributes=0, stx_mode=S_IFDIR|0700, stx_size=60, ...}) = 0
+openat(AT_FDCWD, "/run/crun/a48322315fe15b9911ae4ff331c72139274a0135f452259161dfea4342490532/config.json", O_RDONLY) = 3
+statfs("/sys/fs/cgroup", {f_type=TMPFS_MAGIC, f_bsize=4096, f_blocks=125605, f_bfree=125605, f_bavail=125605, f_files=125605, f_ffree=125587, f_fsid={val=[0, 0]}, f_namelen=255, f_frsize=4096, f_flags=ST_VALID|ST_RDONLY|ST_NOSUID|ST_NODEV|ST_NOEXEC}) = 0
+statfs("/sys/fs/cgroup/unified", {f_type=CGROUP2_SUPER_MAGIC, f_bsize=4096, f_blocks=0, f_bfree=0, f_bavail=0, f_files=0, f_ffree=0, f_fsid={val=[0, 0]}, f_namelen=255, f_frsize=4096, f_flags=ST_VALID|ST_NOSUID|ST_NODEV|ST_NOEXEC|ST_RELATIME}) = 0
+openat(AT_FDCWD, "/sys/fs/cgroup/machine.slice/libpod-a48322315fe15b9911ae4ff331c72139274a0135f452259161dfea4342490532.scope/cgroup.kill", O_WRONLY) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/sys/fs/cgroup/freezer/machine.slice/libpod-a48322315fe15b9911ae4ff331c72139274a0135f452259161dfea4342490532.scope/freezer.state", O_WRONLY|O_CREAT, 0700) = 3
+openat(AT_FDCWD, "/sys/fs/cgroup/memory/machine.slice/libpod-a48322315fe15b9911ae4ff331c72139274a0135f452259161dfea4342490532.scope", O_RDONLY|O_CLOEXEC|O_DIRECTORY) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/sys/fs/cgroup/freezer/machine.slice/libpod-a48322315fe15b9911ae4ff331c72139274a0135f452259161dfea4342490532.scope/freezer.state", O_WRONLY|O_CREAT, 0700) = 3
+openat(AT_FDCWD, "/proc/self/cgroup", O_RDONLY) = 3
+statx(3, "", AT_STATX_DONT_SYNC|AT_SYMLINK_NOFOLLOW|AT_EMPTY_PATH, STATX_SIZE, {stx_mask=STATX_BASIC_STATS, stx_attributes=0, stx_mode=S_IFREG|0444, stx_size=0, ...}) = 0
+rmdir("/sys/fs/cgroup/cpuset/machine.slice/libpod-a48322315fe15b9911ae4ff331c72139274a0135f452259161dfea4342490532.scope") = 0
+rmdir("/sys/fs/cgroup/pids/machine.slice/libpod-a48322315fe15b9911ae4ff331c72139274a0135f452259161dfea4342490532.scope") = -1 ENOENT (No such file or directory)
+rmdir("/sys/fs/cgroup/rdma/machine.slice/libpod-a48322315fe15b9911ae4ff331c72139274a0135f452259161dfea4342490532.scope") = 0
+rmdir("/sys/fs/cgroup/cpu,cpuacct/machine.slice/libpod-a48322315fe15b9911ae4ff331c72139274a0135f452259161dfea4342490532.scope") = -1 ENOENT (No such file or directory)
+rmdir("/sys/fs/cgroup/net_cls,net_prio/machine.slice/libpod-a48322315fe15b9911ae4ff331c72139274a0135f452259161dfea4342490532.scope") = 0
+rmdir("/sys/fs/cgroup/perf_event/machine.slice/libpod-a48322315fe15b9911ae4ff331c72139274a0135f452259161dfea4342490532.scope") = 0
+rmdir("/sys/fs/cgroup/blkio/machine.slice/libpod-a48322315fe15b9911ae4ff331c72139274a0135f452259161dfea4342490532.scope") = -1 ENOENT (No such file or directory)
+rmdir("/sys/fs/cgroup/memory/machine.slice/libpod-a48322315fe15b9911ae4ff331c72139274a0135f452259161dfea4342490532.scope") = -1 ENOENT (No such file or directory)
+rmdir("/sys/fs/cgroup/hugetlb/machine.slice/libpod-a48322315fe15b9911ae4ff331c72139274a0135f452259161dfea4342490532.scope") = 0
+rmdir("/sys/fs/cgroup/freezer/machine.slice/libpod-a48322315fe15b9911ae4ff331c72139274a0135f452259161dfea4342490532.scope") = 0
+rmdir("/sys/fs/cgroup/devices/machine.slice/libpod-a48322315fe15b9911ae4ff331c72139274a0135f452259161dfea4342490532.scope") = -1 ENOENT (No such file or directory)
+rmdir("/sys/fs/cgroup/systemd/machine.slice/libpod-a48322315fe15b9911ae4ff331c72139274a0135f452259161dfea4342490532.scope") = -1 ENOENT (No such file or directory)
+rmdir("/sys/fs/cgroup/unified/machine.slice/libpod-a48322315fe15b9911ae4ff331c72139274a0135f452259161dfea4342490532.scope") = -1 ENOENT (No such file or directory)
+mkdirat(AT_FDCWD, "/run/crun", 0700)    = -1 EEXIST (File exists)
+statx(AT_FDCWD, "/run/crun", AT_STATX_DONT_SYNC, STATX_TYPE, {stx_mask=STATX_BASIC_STATS, stx_attributes=0, stx_mode=S_IFDIR|0700, stx_size=60, ...}) = 0
+openat(AT_FDCWD, "/run/crun", O_RDONLY|O_CLOEXEC|O_DIRECTORY) = 3
+openat(3, "a48322315fe15b9911ae4ff331c72139274a0135f452259161dfea4342490532", O_RDONLY|O_DIRECTORY) = 4
+unlinkat(4, "status", 0)                = 0
+unlinkat(4, "seccomp.bpf", 0)           = 0
+unlinkat(4, "config.json", 0)           = 0
+unlinkat(3, "a48322315fe15b9911ae4ff331c72139274a0135f452259161dfea4342490532", AT_REMOVEDIR) = 0
++++ exited with 0 +++

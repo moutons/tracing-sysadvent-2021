@@ -1,0 +1,29 @@
+openat(AT_FDCWD, "/tmp/conmon-term.WW8UD1", O_RDWR|O_CREAT|O_EXCL, 0600) = 7
+unlink("/tmp/conmon-term.WW8UD1")       = 0
+openat(AT_FDCWD, "/var/lib/containers/storage/overlay-containers/a48322315fe15b9911ae4ff331c72139274a0135f452259161dfea4342490532/userdata", O_RDONLY|O_PATH) = 10
+unlink("/var/lib/containers/storage/overlay-containers/a48322315fe15b9911ae4ff331c72139274a0135f452259161dfea4342490532/userdata/attach") = -1 ENOENT (No such file or directory)
+chmod("/var/lib/containers/storage/overlay-containers/a48322315fe15b9911ae4ff331c72139274a0135f452259161dfea4342490532/userdata/attach", 0700) = 0
+mknod("/var/lib/containers/storage/overlay-containers/a48322315fe15b9911ae4ff331c72139274a0135f452259161dfea4342490532/userdata/ctl", S_IFIFO|0666) = 0
+openat(AT_FDCWD, "/var/lib/containers/storage/overlay-containers/a48322315fe15b9911ae4ff331c72139274a0135f452259161dfea4342490532/userdata/ctl", O_RDONLY|O_NONBLOCK|O_CLOEXEC) = 10
+openat(AT_FDCWD, "/var/lib/containers/storage/overlay-containers/a48322315fe15b9911ae4ff331c72139274a0135f452259161dfea4342490532/userdata/ctl", O_WRONLY|O_CLOEXEC) = 12
+mknod("/var/lib/containers/storage/overlay-containers/a48322315fe15b9911ae4ff331c72139274a0135f452259161dfea4342490532/userdata/winsz", S_IFIFO|0666) = 0
+openat(AT_FDCWD, "/var/lib/containers/storage/overlay-containers/a48322315fe15b9911ae4ff331c72139274a0135f452259161dfea4342490532/userdata/winsz", O_RDONLY|O_NONBLOCK|O_CLOEXEC) = 13
+openat(AT_FDCWD, "/var/lib/containers/storage/overlay-containers/a48322315fe15b9911ae4ff331c72139274a0135f452259161dfea4342490532/userdata/winsz", O_WRONLY|O_CLOEXEC) = 14
+unlink("/tmp/conmon-term.WW8UD1")       = 0
+openat(AT_FDCWD, "/etc/localtime", O_RDONLY|O_CLOEXEC) = 9
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=117793, si_uid=0, si_status=0, si_utime=4, si_stime=0} ---
+--- SIGUSR1 {si_signo=SIGUSR1, si_code=SI_TKILL, si_pid=117792, si_uid=0} ---
+openat(AT_FDCWD, "/run/containers/storage/overlay-containers/a48322315fe15b9911ae4ff331c72139274a0135f452259161dfea4342490532/userdata/pidfile", O_RDONLY) = 9
+statfs("/sys/fs/cgroup", {f_type=TMPFS_MAGIC, f_bsize=4096, f_blocks=125605, f_bfree=125605, f_bavail=125605, f_files=125605, f_ffree=125587, f_fsid={val=[0, 0]}, f_namelen=255, f_frsize=4096, f_flags=ST_VALID|ST_RDONLY|ST_NOSUID|ST_NODEV|ST_NOEXEC}) = 0
+openat(AT_FDCWD, "/proc/117801/cgroup", O_RDONLY|O_CLOEXEC) = 9
+openat(AT_FDCWD, "/sys/fs/cgroup/memory/machine.slice/libpod-a48322315fe15b9911ae4ff331c72139274a0135f452259161dfea4342490532.scope/cgroup.event_control", O_WRONLY|O_CLOEXEC) = 9
+openat(AT_FDCWD, "/sys/fs/cgroup/memory/machine.slice/libpod-a48322315fe15b9911ae4ff331c72139274a0135f452259161dfea4342490532.scope/memory.oom_control", O_RDONLY|O_CLOEXEC) = 16
+openat(AT_FDCWD, "/dev/null", O_WRONLY|O_CLOEXEC) = 9
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=117801, si_uid=0, si_status=0, si_utime=0, si_stime=2} ---
+--- SIGUSR1 {si_signo=SIGUSR1, si_code=SI_TKILL, si_pid=117792, si_uid=0} ---
+openat(AT_FDCWD, "/run/libpod/exits/a48322315fe15b9911ae4ff331c72139274a0135f452259161dfea4342490532.G1FID1", O_RDWR|O_CREAT|O_EXCL, 0666) = 4
+lstat("/run/libpod/exits/a48322315fe15b9911ae4ff331c72139274a0135f452259161dfea4342490532", 0x7ffe74f2f710) = -1 ENOENT (No such file or directory)
+rename("/run/libpod/exits/a48322315fe15b9911ae4ff331c72139274a0135f452259161dfea4342490532.G1FID1", "/run/libpod/exits/a48322315fe15b9911ae4ff331c72139274a0135f452259161dfea4342490532") = 0
+unlink("/var/lib/containers/storage/overlay-containers/a48322315fe15b9911ae4ff331c72139274a0135f452259161dfea4342490532/userdata/attach") = 0
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=117807, si_uid=0, si_status=0, si_utime=8, si_stime=9} ---
++++ exited with 0 +++

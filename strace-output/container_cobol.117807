@@ -1,0 +1,203 @@
+execve("/usr/bin/podman", ["/usr/bin/podman", "--root", "/var/lib/containers/storage", "--runroot", "/run/containers/storage", "--log-level", "warning", "--cgroup-manager", "systemd", "--tmpdir", "/run/libpod", "--runtime", "crun", "--storage-driver", "overlay", "--storage-opt", "overlay.mountopt=nodev,metacopy="..., "--events-backend", "journald", "container", "cleanup", "a48322315fe15b9911ae4ff331c72139"...], 0x7ffe74f31d98 /* 9 vars */) = 0
+access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libpthread.so.0", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libdl.so.2", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libgpgme.so.11", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/librt.so.1", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libseccomp.so.2", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libassuan.so.0", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libgpg-error.so.0", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/proc/self/fd", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY) = 3
+openat(AT_FDCWD, "/sys/kernel/mm/transparent_hugepage/hpage_pmd_size", O_RDONLY) = 3
+readlinkat(AT_FDCWD, "/proc/self/exe", "/usr/bin/podman", 128) = 15
+--- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=117807, si_uid=0} ---
+--- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=117807, si_uid=0} ---
+--- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=117807, si_uid=0} ---
+--- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=117807, si_uid=0} ---
+openat(AT_FDCWD, "/etc/localtime", O_RDONLY) = 3
+openat(AT_FDCWD, "/proc/sys/kernel/cap_last_cap", O_RDONLY|O_CLOEXEC) = 3
+--- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=117807, si_uid=0} ---
+--- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=117807, si_uid=0} ---
+--- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=117807, si_uid=0} ---
+--- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=117807, si_uid=0} ---
+openat(AT_FDCWD, "/usr/bin/podman", O_RDONLY|O_CLOEXEC) = 3
+newfstatat(AT_FDCWD, "/proc", {st_mode=S_IFDIR|0555, st_size=0, ...}, 0) = 0
+openat(AT_FDCWD, "/etc/nsswitch.conf", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libnss_files.so.2", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/etc/passwd", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/etc/passwd", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libnss_systemd.so.2", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/run/systemd/userdb/", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY) = 3
+openat(AT_FDCWD, "/proc/sys/kernel/random/boot_id", O_RDONLY|O_NOCTTY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/etc/nsswitch.conf", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/etc/resolv.conf", O_RDONLY|O_CLOEXEC) = 3
+newfstatat(AT_FDCWD, "/etc/mdns.allow", 0xc00044d488, 0) = -1 ENOENT (No such file or directory)
+stat("/etc/resolv.conf", {st_mode=S_IFREG|0644, st_size=717, ...}) = 0
+openat(AT_FDCWD, "/etc/host.conf", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/etc/resolv.conf", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/etc/hosts", O_RDONLY|O_CLOEXEC) = 3
+newfstatat(AT_FDCWD, "/etc/containers/storage.conf", {st_mode=S_IFREG|0644, st_size=7914, ...}, 0) = 0
+openat(AT_FDCWD, "/etc/containers/storage.conf", O_RDONLY|O_CLOEXEC) = 3
+--- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=117807, si_uid=0} ---
+newfstatat(AT_FDCWD, "/etc/containers/storage.conf", {st_mode=S_IFREG|0644, st_size=7914, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/etc/containers/storage.conf", {st_mode=S_IFREG|0644, st_size=7914, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/run", {st_mode=S_IFDIR|0755, st_size=1060, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/run/containers", {st_mode=S_IFDIR|0700, st_size=60, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/run/containers/storage", {st_mode=S_IFDIR|0700, st_size=120, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/var", {st_mode=S_IFDIR|0755, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/var/lib", {st_mode=S_IFDIR|0755, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/var/lib/containers", {st_mode=S_IFDIR|0755, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/var/lib/containers/storage", {st_mode=S_IFDIR|0700, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0
+openat(AT_FDCWD, "/proc/1/comm", O_RDONLY|O_CLOEXEC) = 3
+statfs("/sys/fs/cgroup", {f_type=TMPFS_MAGIC, f_bsize=4096, f_blocks=125605, f_bfree=125605, f_bavail=125605, f_files=125605, f_ffree=125587, f_fsid={val=[0, 0]}, f_namelen=255, f_frsize=4096, f_flags=ST_VALID|ST_RDONLY|ST_NOSUID|ST_NODEV|ST_NOEXEC}) = 0
+newfstatat(AT_FDCWD, "/usr/bin/crun", {st_mode=S_IFREG|0755, st_size=445552, ...}, 0) = 0
+openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/tls/haswell/x86_64/libsystemd-journal.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat("/lib/x86_64-linux-gnu/tls/haswell/x86_64", 0x7ffd7d77ef10) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/tls/haswell/libsystemd-journal.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat("/lib/x86_64-linux-gnu/tls/haswell", 0x7ffd7d77ef10) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/tls/x86_64/libsystemd-journal.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat("/lib/x86_64-linux-gnu/tls/x86_64", 0x7ffd7d77ef10) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/tls/libsystemd-journal.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat("/lib/x86_64-linux-gnu/tls", 0x7ffd7d77ef10) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/haswell/x86_64/libsystemd-journal.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat("/lib/x86_64-linux-gnu/haswell/x86_64", 0x7ffd7d77ef10) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/haswell/libsystemd-journal.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat("/lib/x86_64-linux-gnu/haswell", 0x7ffd7d77ef10) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/x86_64/libsystemd-journal.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat("/lib/x86_64-linux-gnu/x86_64", 0x7ffd7d77ef10) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libsystemd-journal.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat("/lib/x86_64-linux-gnu", {st_mode=S_IFDIR|0755, st_size=28672, ...}) = 0
+openat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/tls/haswell/x86_64/libsystemd-journal.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat("/usr/lib/x86_64-linux-gnu/tls/haswell/x86_64", 0x7ffd7d77ef10) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/tls/haswell/libsystemd-journal.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat("/usr/lib/x86_64-linux-gnu/tls/haswell", 0x7ffd7d77ef10) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/tls/x86_64/libsystemd-journal.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat("/usr/lib/x86_64-linux-gnu/tls/x86_64", 0x7ffd7d77ef10) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/tls/libsystemd-journal.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat("/usr/lib/x86_64-linux-gnu/tls", 0x7ffd7d77ef10) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/haswell/x86_64/libsystemd-journal.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat("/usr/lib/x86_64-linux-gnu/haswell/x86_64", 0x7ffd7d77ef10) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/haswell/libsystemd-journal.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat("/usr/lib/x86_64-linux-gnu/haswell", 0x7ffd7d77ef10) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/x86_64/libsystemd-journal.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat("/usr/lib/x86_64-linux-gnu/x86_64", 0x7ffd7d77ef10) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/libsystemd-journal.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat("/usr/lib/x86_64-linux-gnu", {st_mode=S_IFDIR|0755, st_size=28672, ...}) = 0
+openat(AT_FDCWD, "/lib/tls/haswell/x86_64/libsystemd-journal.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat("/lib/tls/haswell/x86_64", 0x7ffd7d77ef10) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/lib/tls/haswell/libsystemd-journal.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat("/lib/tls/haswell", 0x7ffd7d77ef10) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/lib/tls/x86_64/libsystemd-journal.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat("/lib/tls/x86_64", 0x7ffd7d77ef10) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/lib/tls/libsystemd-journal.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat("/lib/tls", 0x7ffd7d77ef10)        = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/lib/haswell/x86_64/libsystemd-journal.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat("/lib/haswell/x86_64", 0x7ffd7d77ef10) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/lib/haswell/libsystemd-journal.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat("/lib/haswell", 0x7ffd7d77ef10)    = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/lib/x86_64/libsystemd-journal.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat("/lib/x86_64", 0x7ffd7d77ef10)     = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/lib/libsystemd-journal.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat("/lib", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+openat(AT_FDCWD, "/usr/lib/tls/haswell/x86_64/libsystemd-journal.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat("/usr/lib/tls/haswell/x86_64", 0x7ffd7d77ef10) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/lib/tls/haswell/libsystemd-journal.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat("/usr/lib/tls/haswell", 0x7ffd7d77ef10) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/lib/tls/x86_64/libsystemd-journal.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat("/usr/lib/tls/x86_64", 0x7ffd7d77ef10) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/lib/tls/libsystemd-journal.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat("/usr/lib/tls", 0x7ffd7d77ef10)    = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/lib/haswell/x86_64/libsystemd-journal.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat("/usr/lib/haswell/x86_64", 0x7ffd7d77ef10) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/lib/haswell/libsystemd-journal.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat("/usr/lib/haswell", 0x7ffd7d77ef10) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/lib/x86_64/libsystemd-journal.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat("/usr/lib/x86_64", 0x7ffd7d77ef10) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/lib/libsystemd-journal.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat("/usr/lib", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libsystemd-journal.so", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/libsystemd-journal.so", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/lib/libsystemd-journal.so", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/lib/libsystemd-journal.so", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libsystemd.so.0", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/liblzma.so.5", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/liblz4.so.1", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libgcrypt.so.20", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/run/log/journal", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY) = 3
+openat(AT_FDCWD, "/var/log/journal", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY) = 3
+openat(AT_FDCWD, "/etc/machine-id", O_RDONLY|O_NOCTTY|O_CLOEXEC) = 8
+openat(AT_FDCWD, "/var/log/journal/29f2e659c40640dab8153c2070cdfac6", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY) = 8
+openat(AT_FDCWD, "/var/log/journal/29f2e659c40640dab8153c2070cdfac6/system.journal", O_RDONLY|O_NONBLOCK|O_CLOEXEC) = 9
+openat(AT_FDCWD, "/var/log/journal/29f2e659c40640dab8153c2070cdfac6/system@b23b3f99dac54b749268f24dde5f7d58-0000000000000001-0005d1083ab1b035.journal", O_RDONLY|O_NONBLOCK|O_CLOEXEC) = 10
+openat(AT_FDCWD, "/var/log/journal/29f2e659c40640dab8153c2070cdfac6/system@b23b3f99dac54b749268f24dde5f7d58-000000000000291f-0005d1be8de004a6.journal", O_RDONLY|O_NONBLOCK|O_CLOEXEC) = 11
+openat(AT_FDCWD, "/proc/sys/kernel/pid_max", O_RDONLY|O_CLOEXEC) = 3
+statfs("/sys/fs/selinux", 0xc00051f2b0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/proc/filesystems", O_RDONLY|O_CLOEXEC) = 3
+newfstatat(AT_FDCWD, "/usr/share/containers/containers.conf", {st_mode=S_IFREG|0644, st_size=17738, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/etc/containers/containers.conf", 0xc00009d3b8, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/etc/containers/containers.conf.d", 0xc00009d7c8, AT_SYMLINK_NOFOLLOW) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/share/containers/containers.conf", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/etc/passwd", O_RDONLY|O_CLOEXEC) = 8
+openat(AT_FDCWD, "/run/systemd/userdb/", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY) = 8
+stat("/etc/resolv.conf", {st_mode=S_IFREG|0644, st_size=717, ...}) = 0
+openat(AT_FDCWD, "/etc/hosts", O_RDONLY|O_CLOEXEC) = 8
+openat(AT_FDCWD, "/proc/self/status", O_RDONLY|O_CLOEXEC) = 8
+newfstatat(AT_FDCWD, "/etc/containers/storage.conf", {st_mode=S_IFREG|0644, st_size=7914, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/etc/containers/storage.conf", {st_mode=S_IFREG|0644, st_size=7914, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/run", {st_mode=S_IFDIR|0755, st_size=1060, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/run/containers", {st_mode=S_IFDIR|0700, st_size=60, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/run/containers/storage", {st_mode=S_IFDIR|0700, st_size=120, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/var", {st_mode=S_IFDIR|0755, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/var/lib", {st_mode=S_IFDIR|0755, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/var/lib/containers", {st_mode=S_IFDIR|0755, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/var/lib/containers/storage", {st_mode=S_IFDIR|0700, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/usr/bin/crun", {st_mode=S_IFREG|0755, st_size=445552, ...}, 0) = 0
+openat(AT_FDCWD, "/proc/sys/kernel/pid_max", O_RDONLY|O_CLOEXEC) = 8
+newfstatat(AT_FDCWD, "/usr/share/containers/containers.conf", {st_mode=S_IFREG|0644, st_size=17738, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/etc/containers/containers.conf", 0xc0001d72e8, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/etc/containers/containers.conf.d", 0xc0001d73b8, AT_SYMLINK_NOFOLLOW) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/share/containers/containers.conf", O_RDONLY|O_CLOEXEC) = 8
+--- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=117807, si_uid=0} ---
+newfstatat(AT_FDCWD, "/etc/containers/containers.conf", 0xc000573b08, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/etc/containers/storage.conf", {st_mode=S_IFREG|0644, st_size=7914, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/etc/containers/storage.conf", {st_mode=S_IFREG|0644, st_size=7914, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/run", {st_mode=S_IFDIR|0755, st_size=1060, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/run/containers", {st_mode=S_IFDIR|0700, st_size=60, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/run/containers/storage", {st_mode=S_IFDIR|0700, st_size=120, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/var", {st_mode=S_IFDIR|0755, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/var/lib", {st_mode=S_IFDIR|0755, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/var/lib/containers", {st_mode=S_IFDIR|0755, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/var/lib/containers/storage", {st_mode=S_IFDIR|0700, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/usr/bin/crun", {st_mode=S_IFREG|0755, st_size=445552, ...}, 0) = 0
+openat(AT_FDCWD, "/proc/sys/kernel/pid_max", O_RDONLY|O_CLOEXEC) = 8
+newfstatat(AT_FDCWD, "/usr/share/containers/containers.conf", {st_mode=S_IFREG|0644, st_size=17738, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/etc/containers/containers.conf", 0xc0005a4d38, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/etc/containers/containers.conf.d", 0xc0005a4e08, AT_SYMLINK_NOFOLLOW) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/share/containers/containers.conf", O_RDONLY|O_CLOEXEC) = 8
+--- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=117807, si_uid=0} ---
+newfstatat(AT_FDCWD, "/etc/containers/storage.conf", {st_mode=S_IFREG|0644, st_size=7914, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/etc/containers/storage.conf", {st_mode=S_IFREG|0644, st_size=7914, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/run", {st_mode=S_IFDIR|0755, st_size=1060, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/run/containers", {st_mode=S_IFDIR|0700, st_size=60, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/run/containers/storage", {st_mode=S_IFDIR|0700, st_size=120, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/var", {st_mode=S_IFDIR|0755, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/var/lib", {st_mode=S_IFDIR|0755, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/var/lib/containers", {st_mode=S_IFDIR|0755, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/var/lib/containers/storage", {st_mode=S_IFDIR|0700, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/etc/containers/storage.conf", {st_mode=S_IFREG|0644, st_size=7914, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/etc/containers/storage.conf", {st_mode=S_IFREG|0644, st_size=7914, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/run", {st_mode=S_IFDIR|0755, st_size=1060, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/run/containers", {st_mode=S_IFDIR|0700, st_size=60, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/run/containers/storage", {st_mode=S_IFDIR|0700, st_size=120, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/var", {st_mode=S_IFDIR|0755, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/var/lib", {st_mode=S_IFDIR|0755, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/var/lib/containers", {st_mode=S_IFDIR|0755, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/var/lib/containers/storage", {st_mode=S_IFDIR|0700, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0
++++ exited with 0 +++

@@ -1,0 +1,119 @@
+openat(AT_FDCWD, "/proc/self/oom_score_adj", O_WRONLY) = 15
+execve("/usr/bin/crun", ["/usr/bin/crun", "--systemd-cgroup", "--log-format=json", "--log", "/run/containers/storage/overlay-"..., "create", "--bundle", "/var/lib/containers/storage/over"..., "--pid-file", "/run/containers/storage/overlay-"..., "--console-socket", "/tmp/conmon-term.WW8UD1", "a48322315fe15b9911ae4ff331c72139"...], 0x7ffe74f31d98 /* 9 vars */) = 0
+access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libcriu.so.2", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libsystemd.so.0", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libseccomp.so.2", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libdl.so.2", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libcap.so.2", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libyajl.so.2", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libprotobuf-c.so.1", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/librt.so.1", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/liblzma.so.5", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/liblz4.so.1", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libgcrypt.so.20", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libpthread.so.0", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libgpg-error.so.0", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/proc/self/exe", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/proc/self/cmdline", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/tmp/crun.LDGmFb", O_RDWR|O_CREAT|O_EXCL, 0600) = 3
+mount("/proc/self/exe", "/tmp/crun.LDGmFb", 0x560390e01439, MS_BIND, 0x560390e01439) = 0
+mount("", "/tmp/crun.LDGmFb", 0x560390e01439, MS_RDONLY|MS_REMOUNT|MS_BIND, "") = 0
+openat(AT_FDCWD, "/tmp/crun.LDGmFb", O_RDONLY|O_CLOEXEC|O_PATH) = 3
+umount2("/tmp/crun.LDGmFb", MNT_DETACH) = 0
+unlink("/tmp/crun.LDGmFb")              = 0
+execveat(3, "", ["/usr/bin/crun", "--systemd-cgroup", "--log-format=json", "--log", "/run/containers/storage/overlay-"..., "create", "--bundle", "/var/lib/containers/storage/over"..., "--pid-file", "/run/containers/storage/overlay-"..., "--console-socket", "/tmp/conmon-term.WW8UD1", "a48322315fe15b9911ae4ff331c72139"...], 0x5603921b6590 /* 10 vars */, AT_EMPTY_PATH) = 0
+access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libcriu.so.2", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libsystemd.so.0", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libseccomp.so.2", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libdl.so.2", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libcap.so.2", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libyajl.so.2", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libprotobuf-c.so.1", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/librt.so.1", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/liblzma.so.5", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/liblz4.so.1", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libgcrypt.so.20", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libpthread.so.0", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libgpg-error.so.0", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/proc/self/exe", O_RDONLY|O_CLOEXEC) = 3
+chdir("/var/lib/containers/storage/overlay-containers/a48322315fe15b9911ae4ff331c72139274a0135f452259161dfea4342490532/userdata") = 0
+openat(AT_FDCWD, "/run/containers/storage/overlay-containers/a48322315fe15b9911ae4ff331c72139274a0135f452259161dfea4342490532/userdata/oci-log", O_RDWR|O_CREAT|O_APPEND, 0666) = 3
+openat(AT_FDCWD, "config.json", O_RDONLY) = 4
+mkdirat(AT_FDCWD, "/run/crun", 0700)    = -1 EEXIST (File exists)
+statx(AT_FDCWD, "/run/crun", AT_STATX_DONT_SYNC, STATX_TYPE, {stx_mask=STATX_BASIC_STATS, stx_attributes=0, stx_mode=S_IFDIR|0700, stx_size=40, ...}) = 0
+mkdirat(AT_FDCWD, "/run/crun", 0700)    = -1 EEXIST (File exists)
+statx(AT_FDCWD, "/run/crun", AT_STATX_DONT_SYNC, STATX_TYPE, {stx_mask=STATX_BASIC_STATS, stx_attributes=0, stx_mode=S_IFDIR|0700, stx_size=40, ...}) = 0
+mkdirat(AT_FDCWD, "/run/crun", 0700)    = -1 EEXIST (File exists)
+statx(AT_FDCWD, "/run/crun", AT_STATX_DONT_SYNC, STATX_TYPE, {stx_mask=STATX_BASIC_STATS, stx_attributes=0, stx_mode=S_IFDIR|0700, stx_size=40, ...}) = 0
+access("/run/crun/a48322315fe15b9911ae4ff331c72139274a0135f452259161dfea4342490532", F_OK) = -1 ENOENT (No such file or directory)
+mkdir("/run/crun/a48322315fe15b9911ae4ff331c72139274a0135f452259161dfea4342490532", 0700) = 0
+mkdirat(AT_FDCWD, "/run/crun", 0700)    = -1 EEXIST (File exists)
+statx(AT_FDCWD, "/run/crun", AT_STATX_DONT_SYNC, STATX_TYPE, {stx_mask=STATX_BASIC_STATS, stx_attributes=0, stx_mode=S_IFDIR|0700, stx_size=60, ...}) = 0
+mknod("/run/crun/a48322315fe15b9911ae4ff331c72139274a0135f452259161dfea4342490532/exec.fifo", S_IFIFO|0600) = 0
+openat(AT_FDCWD, "/run/crun/a48322315fe15b9911ae4ff331c72139274a0135f452259161dfea4342490532/exec.fifo", O_RDONLY|O_NONBLOCK) = 4
+mkdirat(AT_FDCWD, "/run/crun", 0700)    = -1 EEXIST (File exists)
+statx(AT_FDCWD, "/run/crun", AT_STATX_DONT_SYNC, STATX_TYPE, {stx_mask=STATX_BASIC_STATS, stx_attributes=0, stx_mode=S_IFDIR|0700, stx_size=60, ...}) = 0
+openat(AT_FDCWD, "./config.json", O_RDONLY) = 5
+statx(5, "", AT_STATX_DONT_SYNC|AT_SYMLINK_NOFOLLOW|AT_EMPTY_PATH, STATX_SIZE, {stx_mask=STATX_ALL, stx_attributes=0, stx_mode=S_IFREG|0644, stx_size=10898, ...}) = 0
+openat(AT_FDCWD, "/run/crun/a48322315fe15b9911ae4ff331c72139274a0135f452259161dfea4342490532/config.json", O_WRONLY|O_CREAT, 0700) = 5
+mkdirat(AT_FDCWD, "/run/crun", 0700)    = -1 EEXIST (File exists)
+statx(AT_FDCWD, "/run/crun", AT_STATX_DONT_SYNC, STATX_TYPE, {stx_mask=STATX_BASIC_STATS, stx_attributes=0, stx_mode=S_IFDIR|0700, stx_size=60, ...}) = 0
+openat(AT_FDCWD, "/run/crun/a48322315fe15b9911ae4ff331c72139274a0135f452259161dfea4342490532/seccomp.bpf", O_RDWR|O_CREAT, 0700) = 5
+statfs("/sys/fs/cgroup", {f_type=TMPFS_MAGIC, f_bsize=4096, f_blocks=125605, f_bfree=125605, f_bavail=125605, f_files=125605, f_ffree=125587, f_fsid={val=[0, 0]}, f_namelen=255, f_frsize=4096, f_flags=ST_VALID|ST_RDONLY|ST_NOSUID|ST_NODEV|ST_NOEXEC}) = 0
+statfs("/sys/fs/cgroup/unified", {f_type=CGROUP2_SUPER_MAGIC, f_bsize=4096, f_blocks=0, f_bfree=0, f_bavail=0, f_files=0, f_ffree=0, f_fsid={val=[0, 0]}, f_namelen=255, f_frsize=4096, f_flags=ST_VALID|ST_NOSUID|ST_NODEV|ST_NOEXEC|ST_RELATIME}) = 0
+openat(AT_FDCWD, "/run/netns/cni-27ee0cd3-c48f-bafc-d43c-ec8c34157c47", O_RDONLY|O_CLOEXEC) = 7
+mkdirat(AT_FDCWD, "/run/crun", 0700)    = -1 EEXIST (File exists)
+statx(AT_FDCWD, "/run/crun", AT_STATX_DONT_SYNC, STATX_TYPE, {stx_mask=STATX_BASIC_STATS, stx_attributes=0, stx_mode=S_IFDIR|0700, stx_size=60, ...}) = 0
+readlink("/proc/117801/fd/0", "/dev/null", 4095) = 9
+readlink("/proc/117801/fd/1", "/dev/null", 4095) = 9
+readlink("/proc/117801/fd/2", "pipe:[1017922]", 4095) = 14
+openat(AT_FDCWD, "/sys/fs/cgroup/unified/cgroup.controllers", O_RDONLY) = 7
+statx(7, "", AT_STATX_DONT_SYNC|AT_SYMLINK_NOFOLLOW|AT_EMPTY_PATH, STATX_SIZE, {stx_mask=STATX_BASIC_STATS, stx_attributes=0, stx_mode=S_IFREG|0444, stx_size=0, ...}) = 0
+openat(AT_FDCWD, "/proc/117801/cgroup", O_RDONLY) = 7
+statx(7, "", AT_STATX_DONT_SYNC|AT_SYMLINK_NOFOLLOW|AT_EMPTY_PATH, STATX_SIZE, {stx_mask=STATX_BASIC_STATS, stx_attributes=0, stx_mode=S_IFREG|0444, stx_size=0, ...}) = 0
+mkdirat(AT_FDCWD, "/sys/fs/cgroup/cpuset/machine.slice/libpod-a48322315fe15b9911ae4ff331c72139274a0135f452259161dfea4342490532.scope", 0755) = 0
+statx(AT_FDCWD, "/sys/fs/cgroup/cpuset/machine.slice/libpod-a48322315fe15b9911ae4ff331c72139274a0135f452259161dfea4342490532.scope", AT_STATX_DONT_SYNC, STATX_TYPE, {stx_mask=STATX_BASIC_STATS, stx_attributes=0, stx_mode=S_IFDIR|0755, stx_size=0, ...}) = 0
+openat(AT_FDCWD, "/sys/fs/cgroup/cpuset/machine.slice/libpod-a48322315fe15b9911ae4ff331c72139274a0135f452259161dfea4342490532.scope", O_RDONLY|O_DIRECTORY) = 7
+openat(7, "cpuset.cpus", O_RDWR)        = 9
+openat(7, "cpuset.mems", O_RDWR)        = 10
+openat(AT_FDCWD, "/sys/fs/cgroup/cpuset/machine.slice", O_RDONLY|O_DIRECTORY) = 11
+openat(11, "cpuset.cpus", O_RDWR)       = 12
+openat(11, "cpuset.mems", O_RDWR)       = 13
+openat(AT_FDCWD, "/sys/fs/cgroup/cpuset/machine.slice/libpod-a48322315fe15b9911ae4ff331c72139274a0135f452259161dfea4342490532.scope/cgroup.procs", O_WRONLY|O_CREAT, 0700) = 7
+mkdirat(AT_FDCWD, "/sys/fs/cgroup/rdma/machine.slice/libpod-a48322315fe15b9911ae4ff331c72139274a0135f452259161dfea4342490532.scope", 0755) = 0
+statx(AT_FDCWD, "/sys/fs/cgroup/rdma/machine.slice/libpod-a48322315fe15b9911ae4ff331c72139274a0135f452259161dfea4342490532.scope", AT_STATX_DONT_SYNC, STATX_TYPE, {stx_mask=STATX_BASIC_STATS, stx_attributes=0, stx_mode=S_IFDIR|0755, stx_size=0, ...}) = 0
+openat(AT_FDCWD, "/sys/fs/cgroup/rdma/machine.slice/libpod-a48322315fe15b9911ae4ff331c72139274a0135f452259161dfea4342490532.scope/cgroup.procs", O_WRONLY|O_CREAT, 0700) = 7
+mkdirat(AT_FDCWD, "/sys/fs/cgroup/net_cls,net_prio/machine.slice/libpod-a48322315fe15b9911ae4ff331c72139274a0135f452259161dfea4342490532.scope", 0755) = 0
+statx(AT_FDCWD, "/sys/fs/cgroup/net_cls,net_prio/machine.slice/libpod-a48322315fe15b9911ae4ff331c72139274a0135f452259161dfea4342490532.scope", AT_STATX_DONT_SYNC, STATX_TYPE, {stx_mask=STATX_BASIC_STATS, stx_attributes=0, stx_mode=S_IFDIR|0755, stx_size=0, ...}) = 0
+openat(AT_FDCWD, "/sys/fs/cgroup/net_cls,net_prio/machine.slice/libpod-a48322315fe15b9911ae4ff331c72139274a0135f452259161dfea4342490532.scope/cgroup.procs", O_WRONLY|O_CREAT, 0700) = 7
+mkdirat(AT_FDCWD, "/sys/fs/cgroup/perf_event/machine.slice/libpod-a48322315fe15b9911ae4ff331c72139274a0135f452259161dfea4342490532.scope", 0755) = 0
+statx(AT_FDCWD, "/sys/fs/cgroup/perf_event/machine.slice/libpod-a48322315fe15b9911ae4ff331c72139274a0135f452259161dfea4342490532.scope", AT_STATX_DONT_SYNC, STATX_TYPE, {stx_mask=STATX_BASIC_STATS, stx_attributes=0, stx_mode=S_IFDIR|0755, stx_size=0, ...}) = 0
+openat(AT_FDCWD, "/sys/fs/cgroup/perf_event/machine.slice/libpod-a48322315fe15b9911ae4ff331c72139274a0135f452259161dfea4342490532.scope/cgroup.procs", O_WRONLY|O_CREAT, 0700) = 7
+mkdirat(AT_FDCWD, "/sys/fs/cgroup/hugetlb/machine.slice/libpod-a48322315fe15b9911ae4ff331c72139274a0135f452259161dfea4342490532.scope", 0755) = 0
+statx(AT_FDCWD, "/sys/fs/cgroup/hugetlb/machine.slice/libpod-a48322315fe15b9911ae4ff331c72139274a0135f452259161dfea4342490532.scope", AT_STATX_DONT_SYNC, STATX_TYPE, {stx_mask=STATX_BASIC_STATS, stx_attributes=0, stx_mode=S_IFDIR|0755, stx_size=0, ...}) = 0
+openat(AT_FDCWD, "/sys/fs/cgroup/hugetlb/machine.slice/libpod-a48322315fe15b9911ae4ff331c72139274a0135f452259161dfea4342490532.scope/cgroup.procs", O_WRONLY|O_CREAT, 0700) = 7
+mkdirat(AT_FDCWD, "/sys/fs/cgroup/freezer/machine.slice/libpod-a48322315fe15b9911ae4ff331c72139274a0135f452259161dfea4342490532.scope", 0755) = 0
+statx(AT_FDCWD, "/sys/fs/cgroup/freezer/machine.slice/libpod-a48322315fe15b9911ae4ff331c72139274a0135f452259161dfea4342490532.scope", AT_STATX_DONT_SYNC, STATX_TYPE, {stx_mask=STATX_BASIC_STATS, stx_attributes=0, stx_mode=S_IFDIR|0755, stx_size=0, ...}) = 0
+openat(AT_FDCWD, "/sys/fs/cgroup/freezer/machine.slice/libpod-a48322315fe15b9911ae4ff331c72139274a0135f452259161dfea4342490532.scope/cgroup.procs", O_WRONLY|O_CREAT, 0700) = 7
+openat(AT_FDCWD, "/sys/fs/cgroup/pids/machine.slice/libpod-a48322315fe15b9911ae4ff331c72139274a0135f452259161dfea4342490532.scope", O_RDONLY|O_DIRECTORY) = 7
+openat(7, "pids.max", O_WRONLY|O_CREAT, 0700) = 9
+openat(AT_FDCWD, "/etc/localtime", O_RDONLY|O_CLOEXEC) = 5
+getcwd("/var/lib/containers/storage/overlay-containers/a48322315fe15b9911ae4ff331c72139274a0135f452259161dfea4342490532/userdata", 4096) = 121
+openat(AT_FDCWD, "/etc/nsswitch.conf", O_RDONLY|O_CLOEXEC) = 5
+openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 5
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libnss_files.so.2", O_RDONLY|O_CLOEXEC) = 5
+openat(AT_FDCWD, "/etc/passwd", O_RDONLY|O_CLOEXEC) = 5
+mkdirat(AT_FDCWD, "/run/crun", 0700)    = -1 EEXIST (File exists)
+statx(AT_FDCWD, "/run/crun", AT_STATX_DONT_SYNC, STATX_TYPE, {stx_mask=STATX_BASIC_STATS, stx_attributes=0, stx_mode=S_IFDIR|0700, stx_size=60, ...}) = 0
+openat(AT_FDCWD, "/proc/117801/stat", O_RDONLY) = 5
+statx(5, "", AT_STATX_DONT_SYNC|AT_SYMLINK_NOFOLLOW|AT_EMPTY_PATH, STATX_SIZE, {stx_mask=STATX_BASIC_STATS, stx_attributes=0, stx_mode=S_IFREG|0444, stx_size=0, ...}) = 0
+openat(AT_FDCWD, "/run/crun/a48322315fe15b9911ae4ff331c72139274a0135f452259161dfea4342490532/status.tmp", O_WRONLY|O_CREAT, 0700) = 5
+rename("/run/crun/a48322315fe15b9911ae4ff331c72139274a0135f452259161dfea4342490532/status.tmp", "/run/crun/a48322315fe15b9911ae4ff331c72139274a0135f452259161dfea4342490532/status") = 0
+openat(AT_FDCWD, "/run/containers/storage/overlay-containers/a48322315fe15b9911ae4ff331c72139274a0135f452259161dfea4342490532/userdata/pidfile", O_WRONLY|O_CREAT|O_TRUNC, 0700) = 5
++++ exited with 0 +++

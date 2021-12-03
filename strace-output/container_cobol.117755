@@ -1,0 +1,12 @@
+execve("/usr/sbin/iptables", ["/usr/sbin/iptables", "-t", "nat", "-N", "CNI-5c9269ee17506a4fa0022c50", "--wait"], 0xc0000aea20 /* 33 vars */) = 0
+access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libip4tc.so.2", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libip6tc.so.2", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libxtables.so.12", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libdl.so.2", O_RDONLY|O_CLOEXEC) = 3
+stat("/usr/lib/x86_64-linux-gnu/xtables/libipt_CNI-5c9269ee17506a4fa0022c50.so", 0x7ffd4d374010) = -1 ENOENT (No such file or directory)
+stat("/usr/lib/x86_64-linux-gnu/xtables/libxt_CNI-5c9269ee17506a4fa0022c50.so", 0x7ffd4d374010) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/run/xtables.lock", O_RDONLY|O_CREAT, 0600) = 3
++++ exited with 0 +++

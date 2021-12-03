@@ -1,0 +1,54 @@
+execve("/opt/cni/bin/bridge", ["/opt/cni/bin/bridge"], 0xc00037f9e0 /* 33 vars */) = 0
+access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libpthread.so.0", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/sys/kernel/mm/transparent_hugepage/hpage_pmd_size", O_RDONLY) = 3
+readlinkat(AT_FDCWD, "/proc/self/exe", "/opt/cni/bin/bridge", 128) = 19
+openat(AT_FDCWD, "/proc/sys/net/ipv6/conf/cni-podman0/accept_ra", O_WRONLY|O_CREAT|O_TRUNC|O_CLOEXEC, 0644) = 3
+openat(AT_FDCWD, "/proc/sys/net/ipv6/conf/cni-podman0/accept_ra", O_RDONLY|O_CLOEXEC) = 3
+statfs("/run/netns/cni-27ee0cd3-c48f-bafc-d43c-ec8c34157c47", {f_type=NSFS_MAGIC, f_bsize=4096, f_blocks=0, f_bfree=0, f_bavail=0, f_files=0, f_ffree=0, f_fsid={val=[0, 0]}, f_namelen=255, f_frsize=4096, f_flags=ST_VALID}) = 0
+openat(AT_FDCWD, "/run/netns/cni-27ee0cd3-c48f-bafc-d43c-ec8c34157c47", O_RDONLY|O_CLOEXEC) = 3
+statfs("/proc/117737/task/117737/ns/net", {f_type=NSFS_MAGIC, f_bsize=4096, f_blocks=0, f_bfree=0, f_bavail=0, f_files=0, f_ffree=0, f_fsid={val=[0, 0]}, f_namelen=255, f_frsize=4096, f_flags=ST_VALID}) = 0
+openat(AT_FDCWD, "/proc/117737/task/117737/ns/net", O_RDONLY|O_CLOEXEC) = 7
+newfstatat(AT_FDCWD, "/usr/local/libexec/cni/host-local", 0xc0000be448, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/libexec/cni/host-local", 0xc0000be518, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/local/lib/cni/host-local", 0xc0000be5e8, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/lib/cni/host-local", 0xc0000be6b8, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/opt/cni/bin/host-local", {st_mode=S_IFREG|0755, st_size=2318776, ...}, 0) = 0
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=117744, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+statfs("/proc/117737/task/117737/ns/net", {f_type=NSFS_MAGIC, f_bsize=4096, f_blocks=0, f_bfree=0, f_bavail=0, f_files=0, f_ffree=0, f_fsid={val=[0, 0]}, f_namelen=255, f_frsize=4096, f_flags=ST_VALID}) = 0
+openat(AT_FDCWD, "/proc/117737/task/117737/ns/net", O_RDONLY|O_CLOEXEC) = 7
+statfs("/proc/117737/task/117737/ns/net", {f_type=NSFS_MAGIC, f_bsize=4096, f_blocks=0, f_bfree=0, f_bavail=0, f_files=0, f_ffree=0, f_fsid={val=[0, 0]}, f_namelen=255, f_frsize=4096, f_flags=ST_VALID}) = 0
+openat(AT_FDCWD, "/proc/117737/task/117737/ns/net", O_RDONLY|O_CLOEXEC) = 7
+openat(AT_FDCWD, "/proc/sys/net/ipv4/ip_forward", O_RDONLY|O_CLOEXEC) = 7
+newfstatat(AT_FDCWD, "/usr/local/sbin/iptables", 0xc0000beed8, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/local/bin/iptables", 0xc0000befa8, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/sbin/iptables", {st_mode=S_IFREG|0755, st_size=99296, ...}, 0) = 0
+openat(AT_FDCWD, "/dev/null", O_RDONLY|O_CLOEXEC) = 7
+openat(AT_FDCWD, "/dev/null", O_WRONLY|O_CLOEXEC) = 10
+--- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=117737, si_uid=0} ---
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=117753, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+openat(AT_FDCWD, "/dev/null", O_RDONLY|O_CLOEXEC) = 7
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=117754, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+openat(AT_FDCWD, "/dev/null", O_RDONLY|O_CLOEXEC) = 7
+openat(AT_FDCWD, "/dev/null", O_WRONLY|O_CLOEXEC) = 8
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=117755, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+openat(AT_FDCWD, "/dev/null", O_RDONLY|O_CLOEXEC) = 7
+openat(AT_FDCWD, "/dev/null", O_WRONLY|O_CLOEXEC) = 8
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=117756, si_uid=0, si_status=1, si_utime=0, si_stime=0} ---
+openat(AT_FDCWD, "/dev/null", O_RDONLY|O_CLOEXEC) = 7
+openat(AT_FDCWD, "/dev/null", O_WRONLY|O_CLOEXEC) = 8
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=117757, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+openat(AT_FDCWD, "/dev/null", O_RDONLY|O_CLOEXEC) = 7
+openat(AT_FDCWD, "/dev/null", O_WRONLY|O_CLOEXEC) = 8
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=117758, si_uid=0, si_status=1, si_utime=0, si_stime=0} ---
+openat(AT_FDCWD, "/dev/null", O_RDONLY|O_CLOEXEC) = 7
+openat(AT_FDCWD, "/dev/null", O_WRONLY|O_CLOEXEC) = 8
+openat(AT_FDCWD, "/dev/null", O_RDONLY|O_CLOEXEC) = 7
+openat(AT_FDCWD, "/dev/null", O_WRONLY|O_CLOEXEC) = 8
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=117760, si_uid=0, si_status=1, si_utime=0, si_stime=0} ---
+openat(AT_FDCWD, "/dev/null", O_RDONLY|O_CLOEXEC) = 7
+openat(AT_FDCWD, "/dev/null", O_WRONLY|O_CLOEXEC) = 8
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=117761, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
++++ exited with 0 +++

@@ -1,0 +1,32 @@
+openat(AT_FDCWD, "/run/containers/storage/overlay-layers/.tmp-mountpoints.json553901257", O_RDWR|O_CREAT|O_EXCL|O_CLOEXEC, 0600) = 10
+fchmodat(AT_FDCWD, "/run/containers/storage/overlay-layers/.tmp-mountpoints.json553901257", 0600) = 0
+newfstatat(AT_FDCWD, "/run/containers/storage/overlay-layers/mountpoints.json", {st_mode=S_IFREG|0600, st_size=2, ...}, AT_SYMLINK_NOFOLLOW) = 0
+renameat(AT_FDCWD, "/run/containers/storage/overlay-layers/.tmp-mountpoints.json553901257", AT_FDCWD, "/run/containers/storage/overlay-layers/mountpoints.json") = 0
+openat(AT_FDCWD, "/run/containers/storage/overlay-layers/mountpoints.json", O_RDONLY|O_CLOEXEC) = 10
+newfstatat(AT_FDCWD, "/var", {st_mode=S_IFDIR|0755, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/var/lib", {st_mode=S_IFDIR|0755, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/var/lib/containers", {st_mode=S_IFDIR|0755, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/var/lib/containers/storage", {st_mode=S_IFDIR|0700, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/var/lib/containers/storage/overlay", {st_mode=S_IFDIR|0700, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/var/lib/containers/storage/overlay/52e81be9293b60fb4d67fee4240fc72caeefa8f65b2248d8a9c758f5d6a80d62", {st_mode=S_IFDIR|0700, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/var/lib/containers/storage/overlay/52e81be9293b60fb4d67fee4240fc72caeefa8f65b2248d8a9c758f5d6a80d62/merged", {st_mode=S_IFDIR|0555, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0
+fchownat(AT_FDCWD, "/var/lib/containers/storage/overlay/52e81be9293b60fb4d67fee4240fc72caeefa8f65b2248d8a9c758f5d6a80d62/merged", 0, 0, 0) = 0
+newfstatat(AT_FDCWD, "/var/lib/containers/storage/overlay/52e81be9293b60fb4d67fee4240fc72caeefa8f65b2248d8a9c758f5d6a80d62/merged/etc", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/var/lib/containers/storage/overlay/52e81be9293b60fb4d67fee4240fc72caeefa8f65b2248d8a9c758f5d6a80d62/merged/etc", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0
+symlinkat("/proc/mounts", AT_FDCWD, "/var/lib/containers/storage/overlay/52e81be9293b60fb4d67fee4240fc72caeefa8f65b2248d8a9c758f5d6a80d62/merged/etc/mtab") = 0
+openat(AT_FDCWD, "/run/netns/cni-27ee0cd3-c48f-bafc-d43c-ec8c34157c47", O_RDONLY|O_CLOEXEC) = 7
+unlinkat(AT_FDCWD, "/run/netns/cni-27ee0cd3-c48f-bafc-d43c-ec8c34157c47", 0) = -1 EBUSY (Device or resource busy)
+unlinkat(AT_FDCWD, "/run/netns/cni-27ee0cd3-c48f-bafc-d43c-ec8c34157c47", AT_REMOVEDIR) = -1 ENOTDIR (Not a directory)
+openat(AT_FDCWD, "/run/netns", O_RDONLY|O_CLOEXEC) = 8
+unlinkat(8, "cni-27ee0cd3-c48f-bafc-d43c-ec8c34157c47", 0) = -1 EBUSY (Device or resource busy)
+openat(AT_FDCWD, "/var/lib/containers/storage/libpod/bolt_state.db", O_RDWR|O_CREAT|O_CLOEXEC, 0600) = 8
+openat(AT_FDCWD, "/var/lib/containers/storage/libpod/bolt_state.db", O_RDWR|O_CREAT|O_CLOEXEC, 0600) = 8
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=117787, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+openat(AT_FDCWD, "/var/lib/containers/storage/overlay-containers/a48322315fe15b9911ae4ff331c72139274a0135f452259161dfea4342490532/userdata/ctl", O_WRONLY|O_CLOEXEC) = 8
+newfstatat(AT_FDCWD, "/run/libpod/exits/a48322315fe15b9911ae4ff331c72139274a0135f452259161dfea4342490532", {st_mode=S_IFREG|0644, st_size=1, ...}, 0) = 0
+openat(AT_FDCWD, "/var/lib/containers/storage/libpod/bolt_state.db", O_RDWR|O_CREAT|O_CLOEXEC, 0600) = 8
+newfstatat(AT_FDCWD, "/run/libpod/exits/a48322315fe15b9911ae4ff331c72139274a0135f452259161dfea4342490532", {st_mode=S_IFREG|0644, st_size=1, ...}, 0) = 0
+openat(AT_FDCWD, "/run/libpod/exits/a48322315fe15b9911ae4ff331c72139274a0135f452259161dfea4342490532", O_RDONLY|O_CLOEXEC) = 8
+newfstatat(AT_FDCWD, "/var/lib/containers/storage/overlay-containers/a48322315fe15b9911ae4ff331c72139274a0135f452259161dfea4342490532/userdata/oom", 0xc0006d1968, 0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/var/lib/containers/storage/libpod/bolt_state.db", O_RDWR|O_CREAT|O_CLOEXEC, 0600) = 8
++++ exited with 0 +++

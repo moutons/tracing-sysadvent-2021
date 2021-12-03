@@ -1,0 +1,26 @@
+chdir("/var/lib/containers/storage/overlay-containers/a48322315fe15b9911ae4ff331c72139274a0135f452259161dfea4342490532/userdata") = 0
+execve("/usr/libexec/podman/conmon", ["/usr/libexec/podman/conmon", "--api-version", "1", "-c", "a48322315fe15b9911ae4ff331c72139"..., "-u", "a48322315fe15b9911ae4ff331c72139"..., "-r", "/usr/bin/crun", "-b", "/var/lib/containers/storage/over"..., "-p", "/run/containers/storage/overlay-"..., "-n", "charming_hodgkin", "--exit-dir", "/run/libpod/exits", "--full-attach", "-s", "-l", "journald", "--log-level", "warning", "--runtime-arg", "--log-format=json", "--runtime-arg", "--log", "--runtime-arg=/run/containers/st"..., "-t", "--conmon-pidfile", "/run/containers/storage/overlay-"..., "--exit-command", ...], 0xc00043aa00 /* 9 vars */) = 0
+access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 5
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libglib-2.0.so.0", O_RDONLY|O_CLOEXEC) = 5
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libsystemd.so.0", O_RDONLY|O_CLOEXEC) = 5
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 5
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libpcre.so.3", O_RDONLY|O_CLOEXEC) = 5
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libpthread.so.0", O_RDONLY|O_CLOEXEC) = 5
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/librt.so.1", O_RDONLY|O_CLOEXEC) = 5
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/liblzma.so.5", O_RDONLY|O_CLOEXEC) = 5
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/liblz4.so.1", O_RDONLY|O_CLOEXEC) = 5
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libgcrypt.so.20", O_RDONLY|O_CLOEXEC) = 5
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libgpg-error.so.0", O_RDONLY|O_CLOEXEC) = 5
+openat(AT_FDCWD, "/proc/self/fd", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY) = 5
+openat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/charset.alias", O_RDONLY) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache", O_RDONLY) = 5
+access("/usr/bin/crun", X_OK)           = 0
+getcwd("/var/lib/containers/storage/overlay-containers/a48322315fe15b9911ae4ff331c72139274a0135f452259161dfea4342490532/userdata", 4096) = 121
+openat(AT_FDCWD, "/proc/self/oom_score_adj", O_WRONLY) = 6
+openat(AT_FDCWD, "/dev/null", O_RDONLY|O_CLOEXEC) = 4
+openat(AT_FDCWD, "/dev/null", O_WRONLY|O_CLOEXEC) = 6
+openat(AT_FDCWD, "/run/containers/storage/overlay-containers/a48322315fe15b9911ae4ff331c72139274a0135f452259161dfea4342490532/userdata/conmon.pid.KEBVD1", O_RDWR|O_CREAT|O_EXCL, 0666) = 7
+lstat("/run/containers/storage/overlay-containers/a48322315fe15b9911ae4ff331c72139274a0135f452259161dfea4342490532/userdata/conmon.pid", 0x7ffe74f2f710) = -1 ENOENT (No such file or directory)
+rename("/run/containers/storage/overlay-containers/a48322315fe15b9911ae4ff331c72139274a0135f452259161dfea4342490532/userdata/conmon.pid.KEBVD1", "/run/containers/storage/overlay-containers/a48322315fe15b9911ae4ff331c72139274a0135f452259161dfea4342490532/userdata/conmon.pid") = 0
++++ exited with 0 +++

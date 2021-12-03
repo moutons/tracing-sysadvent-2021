@@ -1,0 +1,57 @@
+execve("/usr/bin/crun", ["/usr/bin/crun", "start", "a48322315fe15b9911ae4ff331c72139"...], 0xc0006debb8 /* 2 vars */) = 0
+access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libcriu.so.2", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libsystemd.so.0", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libseccomp.so.2", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libdl.so.2", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libcap.so.2", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libyajl.so.2", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libprotobuf-c.so.1", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/librt.so.1", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/liblzma.so.5", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/liblz4.so.1", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libgcrypt.so.20", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libpthread.so.0", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libgpg-error.so.0", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/proc/self/exe", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/proc/self/cmdline", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/tmp/crun.jePGIW", O_RDWR|O_CREAT|O_EXCL, 0600) = 3
+mount("/proc/self/exe", "/tmp/crun.jePGIW", 0x5652bd252439, MS_BIND, 0x5652bd252439) = 0
+mount("", "/tmp/crun.jePGIW", 0x5652bd252439, MS_RDONLY|MS_REMOUNT|MS_BIND, "") = 0
+openat(AT_FDCWD, "/tmp/crun.jePGIW", O_RDONLY|O_CLOEXEC|O_PATH) = 3
+umount2("/tmp/crun.jePGIW", MNT_DETACH) = 0
+unlink("/tmp/crun.jePGIW")              = 0
+execveat(3, "", ["/usr/bin/crun", "start", "a48322315fe15b9911ae4ff331c72139"...], 0x5652be07f360 /* 3 vars */, AT_EMPTY_PATH) = 0
+access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libcriu.so.2", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libsystemd.so.0", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libseccomp.so.2", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libdl.so.2", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libcap.so.2", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libyajl.so.2", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libprotobuf-c.so.1", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/librt.so.1", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/liblzma.so.5", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/liblz4.so.1", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libgcrypt.so.20", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libpthread.so.0", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libgpg-error.so.0", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/proc/self/exe", O_RDONLY|O_CLOEXEC) = 3
+mkdirat(AT_FDCWD, "/run/crun", 0700)    = -1 EEXIST (File exists)
+statx(AT_FDCWD, "/run/crun", AT_STATX_DONT_SYNC, STATX_TYPE, {stx_mask=STATX_BASIC_STATS, stx_attributes=0, stx_mode=S_IFDIR|0700, stx_size=60, ...}) = 0
+openat(AT_FDCWD, "/run/crun/a48322315fe15b9911ae4ff331c72139274a0135f452259161dfea4342490532/status", O_RDONLY) = 3
+statx(3, "", AT_STATX_DONT_SYNC|AT_SYMLINK_NOFOLLOW|AT_EMPTY_PATH, STATX_SIZE, {stx_mask=STATX_BASIC_STATS, stx_attributes=0, stx_mode=S_IFREG|0700, stx_size=731, ...}) = 0
+openat(AT_FDCWD, "/proc/117801/stat", O_RDONLY) = 3
+statx(3, "", AT_STATX_DONT_SYNC|AT_SYMLINK_NOFOLLOW|AT_EMPTY_PATH, STATX_SIZE, {stx_mask=STATX_BASIC_STATS, stx_attributes=0, stx_mode=S_IFREG|0444, stx_size=0, ...}) = 0
+mkdirat(AT_FDCWD, "/run/crun", 0700)    = -1 EEXIST (File exists)
+statx(AT_FDCWD, "/run/crun", AT_STATX_DONT_SYNC, STATX_TYPE, {stx_mask=STATX_BASIC_STATS, stx_attributes=0, stx_mode=S_IFDIR|0700, stx_size=60, ...}) = 0
+openat(AT_FDCWD, "/run/crun/a48322315fe15b9911ae4ff331c72139274a0135f452259161dfea4342490532/config.json", O_RDONLY) = 3
+mkdirat(AT_FDCWD, "/run/crun", 0700)    = -1 EEXIST (File exists)
+statx(AT_FDCWD, "/run/crun", AT_STATX_DONT_SYNC, STATX_TYPE, {stx_mask=STATX_BASIC_STATS, stx_attributes=0, stx_mode=S_IFDIR|0700, stx_size=60, ...}) = 0
+openat(AT_FDCWD, "/run/crun/a48322315fe15b9911ae4ff331c72139274a0135f452259161dfea4342490532/exec.fifo", O_WRONLY) = 3
+unlink("/run/crun/a48322315fe15b9911ae4ff331c72139274a0135f452259161dfea4342490532/exec.fifo") = 0
++++ exited with 0 +++

@@ -1,0 +1,4 @@
+openat(AT_FDCWD, "/dev/null", O_RDONLY|O_CLOEXEC) = 8
+openat(AT_FDCWD, "/dev/null", O_WRONLY|O_CLOEXEC) = 9
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=117848, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
++++ exited with 0 +++

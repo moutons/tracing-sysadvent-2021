@@ -1,0 +1,5 @@
+statfs("/proc/117737/task/117740/ns/net", {f_type=NSFS_MAGIC, f_bsize=4096, f_blocks=0, f_bfree=0, f_bavail=0, f_files=0, f_ffree=0, f_fsid={val=[0, 0]}, f_namelen=255, f_frsize=4096, f_flags=ST_VALID}) = 0
+openat(AT_FDCWD, "/proc/117737/task/117740/ns/net", O_RDONLY|O_CLOEXEC) = 10
+openat(AT_FDCWD, "/proc/sys/net/ipv6/conf/veth3594b464/accept_ra", O_WRONLY|O_CREAT|O_TRUNC|O_CLOEXEC, 0644) = 11
+openat(AT_FDCWD, "/proc/sys/net/ipv6/conf/veth3594b464/accept_ra", O_RDONLY|O_CLOEXEC) = 11
++++ exited with 0 +++

@@ -1,0 +1,25 @@
+openat(AT_FDCWD, "/var/lib/containers/storage/libpod/bolt_state.db", O_RDWR|O_CREAT|O_CLOEXEC, 0600) = 8
+statfs("/run/netns/cni-27ee0cd3-c48f-bafc-d43c-ec8c34157c47", {f_type=NSFS_MAGIC, f_bsize=4096, f_blocks=0, f_bfree=0, f_bavail=0, f_files=0, f_ffree=0, f_fsid={val=[0, 0]}, f_namelen=255, f_frsize=4096, f_flags=ST_VALID}) = 0
+openat(AT_FDCWD, "/run/netns/cni-27ee0cd3-c48f-bafc-d43c-ec8c34157c47", O_RDONLY|O_CLOEXEC) = 8
+statfs("/proc/117706/task/117736/ns/net", {f_type=NSFS_MAGIC, f_bsize=4096, f_blocks=0, f_bfree=0, f_bavail=0, f_files=0, f_ffree=0, f_fsid={val=[0, 0]}, f_namelen=255, f_frsize=4096, f_flags=ST_VALID}) = 0
+openat(AT_FDCWD, "/proc/117706/task/117736/ns/net", O_RDONLY|O_CLOEXEC) = 9
+statfs("/proc/117706/task/117736/ns/net", {f_type=NSFS_MAGIC, f_bsize=4096, f_blocks=0, f_bfree=0, f_bavail=0, f_files=0, f_ffree=0, f_fsid={val=[0, 0]}, f_namelen=255, f_frsize=4096, f_flags=ST_VALID}) = 0
+openat(AT_FDCWD, "/proc/117706/task/117736/ns/net", O_RDONLY|O_CLOEXEC) = 10
+newfstatat(AT_FDCWD, "/usr/local/libexec/cni/bridge", 0xc0002e3968, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/libexec/cni/bridge", 0xc0002e3a38, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/local/lib/cni/bridge", 0xc0002e3b08, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/lib/cni/bridge", 0xc0002e3bd8, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/opt/cni/bin/bridge", {st_mode=S_IFREG|0755, st_size=3021592, ...}, 0) = 0
+--- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=117706, si_uid=0} ---
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=117737, si_uid=0, si_status=0, si_utime=1, si_stime=2} ---
+newfstatat(AT_FDCWD, "/usr/local/libexec/cni/tuning", 0xc0005e4d38, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/libexec/cni/tuning", 0xc0005e4e08, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/local/lib/cni/tuning", 0xc0005e4ed8, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/lib/cni/tuning", 0xc0005e4fa8, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/opt/cni/bin/tuning", {st_mode=S_IFREG|0755, st_size=2468312, ...}, 0) = 0
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=117782, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+newfstatat(AT_FDCWD, "/var/lib/cni/results", {st_mode=S_IFDIR|0700, st_size=4096, ...}, 0) = 0
+openat(AT_FDCWD, "/var/lib/cni/results/podman-a48322315fe15b9911ae4ff331c72139274a0135f452259161dfea4342490532-eth0", O_WRONLY|O_CREAT|O_TRUNC|O_CLOEXEC, 0600) = 8
+openat(AT_FDCWD, "/var/lib/containers/storage/overlay-containers/a48322315fe15b9911ae4ff331c72139274a0135f452259161dfea4342490532/userdata/attach", O_RDONLY|O_PATH) = 8
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=117803, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
++++ exited with 0 +++

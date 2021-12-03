@@ -1,0 +1,145 @@
+newfstatat(AT_FDCWD, "/usr/libexec/podman/conmon", {st_mode=S_IFREG|0755, st_size=156200, ...}, 0) = 0
+openat(AT_FDCWD, "/dev/null", O_RDONLY|O_CLOEXEC) = 8
+openat(AT_FDCWD, "/dev/null", O_WRONLY|O_CLOEXEC) = 11
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=117812, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+newfstatat(AT_FDCWD, "/var/lib/containers/storage/libpod", {st_mode=S_IFDIR|0700, st_size=4096, ...}, 0) = 0
+openat(AT_FDCWD, "/var/lib/containers/storage/libpod/bolt_state.db", O_RDWR|O_CREAT|O_CLOEXEC, 0600) = 8
+openat(AT_FDCWD, "/var/lib/containers/storage/libpod/bolt_state.db", O_RDWR|O_CREAT|O_CLOEXEC, 0600) = 8
+statfs("/sys/fs/cgroup", {f_type=TMPFS_MAGIC, f_bsize=4096, f_blocks=125605, f_bfree=125605, f_bavail=125605, f_files=125605, f_ffree=125587, f_fsid={val=[0, 0]}, f_namelen=255, f_frsize=4096, f_flags=ST_VALID|ST_RDONLY|ST_NOSUID|ST_NODEV|ST_NOEXEC}) = 0
+openat(AT_FDCWD, "/var/lib/containers/storage/libpod/bolt_state.db", O_RDWR|O_CREAT|O_CLOEXEC, 0600) = 8
+newfstatat(AT_FDCWD, "/etc/containers/storage.conf", {st_mode=S_IFREG|0644, st_size=7914, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/etc/containers/storage.conf", {st_mode=S_IFREG|0644, st_size=7914, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/run", {st_mode=S_IFDIR|0755, st_size=1060, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/run/containers", {st_mode=S_IFDIR|0700, st_size=60, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/run/containers/storage", {st_mode=S_IFDIR|0700, st_size=120, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/var", {st_mode=S_IFDIR|0755, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/var/lib", {st_mode=S_IFDIR|0755, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/var/lib/containers", {st_mode=S_IFDIR|0755, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/var/lib/containers/storage", {st_mode=S_IFDIR|0700, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/run/containers/storage", {st_mode=S_IFDIR|0700, st_size=120, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/var/lib/containers/storage", {st_mode=S_IFDIR|0700, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/var/lib/containers/storage/mounts", {st_mode=S_IFDIR|0700, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/var/lib/containers/storage/tmp", {st_mode=S_IFDIR|0700, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/var/lib/containers/storage/overlay", {st_mode=S_IFDIR|0700, st_size=4096, ...}, 0) = 0
+openat(AT_FDCWD, "/var/lib/containers/storage/storage.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 8
+openat(AT_FDCWD, "/var/lib/containers/storage/userns.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 8
+openat(AT_FDCWD, "/var/lib/containers/storage/storage.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 8
+statfs("/var/lib/containers/storage", {f_type=EXT2_SUPER_MAGIC, f_bsize=4096, f_blocks=6306740, f_bfree=5323749, f_bavail=5319653, f_files=3225600, f_ffree=3037174, f_fsid={val=[3881724949, 3185380084]}, f_namelen=255, f_frsize=4096, f_flags=ST_VALID|ST_RELATIME}) = 0
+newfstatat(AT_FDCWD, "/var/lib/containers/storage/overlay/l", {st_mode=S_IFDIR|0700, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/var/lib/containers/storage/overlay/l", {st_mode=S_IFDIR|0700, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/run/containers/storage/overlay", {st_mode=S_IFDIR|0700, st_size=100, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/run/containers/storage/overlay", {st_mode=S_IFDIR|0700, st_size=100, ...}, 0) = 0
+openat(AT_FDCWD, "/run/containers/storage/overlay/overlay-true", O_RDONLY|O_CLOEXEC) = 9
+openat(AT_FDCWD, "/run/containers/storage/overlay/metacopy(nodev,metacopy=on)-true", O_RDONLY|O_CLOEXEC) = 9
+syscall_0x1b5(0xffffffffffffff9c, 0xc000244d40, 0xc0005d6200, 0x18, 0, 0) = -1 ENOSYS (Function not implemented)
+newfstatat(AT_FDCWD, "/var/lib/containers/storage/overlay", {st_mode=S_IFDIR|0700, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/var/lib/containers/storage", {st_mode=S_IFDIR|0700, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/var", {st_mode=S_IFDIR|0755, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/var/lib", {st_mode=S_IFDIR|0755, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/var/lib/containers", {st_mode=S_IFDIR|0755, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/var/lib/containers/storage", {st_mode=S_IFDIR|0700, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/var/lib/containers/storage/overlay", {st_mode=S_IFDIR|0700, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/var/lib/containers/storage/overlay", {st_mode=S_IFDIR|0700, st_size=4096, ...}, 0) = 0
+openat(AT_FDCWD, "/proc/self/mountinfo", O_RDONLY|O_CLOEXEC) = 9
+mount("", "/var/lib/containers/storage/overlay", 0xc000350469, MS_PRIVATE, NULL) = 0
+openat(AT_FDCWD, "/run/containers/storage/overlay/native-diff(nodev,metacopy=on)-true", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/run/containers/storage/overlay/native-diff(nodev,metacopy=on)-false", O_RDONLY|O_CLOEXEC) = 9
+newfstatat(AT_FDCWD, "/var/lib/containers/storage/overlay-images", {st_mode=S_IFDIR|0700, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/var/lib/containers/storage/overlay-images", {st_mode=S_IFDIR|0700, st_size=4096, ...}, 0) = 0
+openat(AT_FDCWD, "/var/lib/containers/storage/overlay-images/images.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 8
+openat(AT_FDCWD, "/var/lib/containers/storage/overlay-images/images.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 8
+openat(AT_FDCWD, "/var/lib/containers/storage/overlay-images/images.json", O_RDONLY|O_CLOEXEC) = 9
+newfstatat(AT_FDCWD, "/var/lib/containers/storage/overlay-containers", {st_mode=S_IFDIR|0700, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/var/lib/containers/storage/overlay-containers", {st_mode=S_IFDIR|0700, st_size=4096, ...}, 0) = 0
+openat(AT_FDCWD, "/var/lib/containers/storage/overlay-containers/containers.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 8
+openat(AT_FDCWD, "/var/lib/containers/storage/overlay-containers/containers.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 8
+openat(AT_FDCWD, "/var/lib/containers/storage/overlay-containers/containers.json", O_RDONLY|O_CLOEXEC) = 9
+newfstatat(AT_FDCWD, "/run/containers/storage/overlay-containers", {st_mode=S_IFDIR|0700, st_size=140, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/run/containers/storage/overlay-locks", {st_mode=S_IFDIR|0700, st_size=40, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/run/libpod", {st_mode=S_IFDIR|0751, st_size=120, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/run/libpod/events", {st_mode=S_IFDIR|0700, st_size=40, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/usr/bin/runc", 0xc0001d6fa8, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/sbin/runc", 0xc0001d7078, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/local/bin/runc", 0xc0001d7148, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/local/sbin/runc", 0xc0001d7218, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/sbin/runc", 0xc0001d72e8, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/bin/runc", 0xc0001d73b8, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/lib/cri-o-runc/sbin/runc", 0xc0001d76f8, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/run/current-system/sw/bin/runc", 0xc0001d7bd8, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/local/sbin/runc", 0xc0001d7ca8, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/local/bin/runc", 0xc0001d7d78, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/sbin/runc", 0xc0001d7e48, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/bin/runc", 0xc0001d7f18, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/sbin/runc", 0xc000272038, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/bin/runc", 0xc000272108, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/bin/kata-runtime", 0xc0002721d8, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/sbin/kata-runtime", 0xc0002722a8, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/local/bin/kata-runtime", 0xc000272378, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/local/sbin/kata-runtime", 0xc000272518, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/sbin/kata-runtime", 0xc0002725e8, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/bin/kata-runtime", 0xc000272d38, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/bin/kata-qemu", 0xc000273558, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/bin/kata-fc", 0xc000273628, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/local/sbin/kata", 0xc000273898, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/local/bin/kata", 0xc000273b08, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/sbin/kata", 0xc000273bd8, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/bin/kata", 0xc000273ca8, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/sbin/kata", 0xc000273d78, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/bin/kata", 0xc000273e48, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/bin/runsc", 0xc0005ec038, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/sbin/runsc", 0xc0005ec108, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/local/bin/runsc", 0xc0005ec1d8, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/local/sbin/runsc", 0xc0005ec2a8, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/bin/runsc", 0xc0005ec378, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/sbin/runsc", 0xc0005ec448, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/run/current-system/sw/bin/runsc", 0xc0005ec518, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/local/sbin/runsc", 0xc0005ec5e8, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/local/bin/runsc", 0xc0005ec6b8, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/sbin/runsc", 0xc0005ec788, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/bin/runsc", 0xc0005ec858, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/sbin/runsc", 0xc0005ec928, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/bin/runsc", 0xc0005ec9f8, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/bin/crun", {st_mode=S_IFREG|0755, st_size=445552, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/run/libpod/exits", {st_mode=S_IFDIR|0750, st_size=60, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/run/libpod", {st_mode=S_IFDIR|0751, st_size=120, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/var/lib/containers/storage/libpod/defaultCNINetExists", {st_mode=S_IFREG|0644, st_size=0, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/usr/local/sbin/nsenter", 0xc0005ece08, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/local/bin/nsenter", 0xc0005eced8, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/sbin/nsenter", 0xc0005ecfa8, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/bin/nsenter", {st_mode=S_IFREG|0755, st_size=35256, ...}, 0) = 0
+openat(AT_FDCWD, "/etc/cni/net.d/", O_RDONLY|O_CLOEXEC) = 8
+newfstatat(AT_FDCWD, "/etc/cni/net.d//87-podman.conflist", {st_mode=S_IFREG|0644, st_size=639, ...}, AT_SYMLINK_NOFOLLOW) = 0
+openat(AT_FDCWD, "/etc/cni/net.d/87-podman.conflist", O_RDONLY|O_CLOEXEC) = 8
+newfstatat(AT_FDCWD, "/usr/local/libexec/cni/bridge", 0xc0005ed628, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/libexec/cni/bridge", 0xc0005ed6f8, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/local/lib/cni/bridge", 0xc0005ed7c8, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/lib/cni/bridge", 0xc0005ed898, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/opt/cni/bin/bridge", {st_mode=S_IFREG|0755, st_size=3021592, ...}, 0) = 0
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=117814, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+newfstatat(AT_FDCWD, "/usr/local/libexec/cni/portmap", 0xc0005edb08, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/libexec/cni/portmap", 0xc0005edbd8, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/local/lib/cni/portmap", 0xc0005edca8, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/lib/cni/portmap", 0xc0005edd78, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/opt/cni/bin/portmap", {st_mode=S_IFREG|0755, st_size=2675000, ...}, 0) = 0
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=117819, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+newfstatat(AT_FDCWD, "/usr/local/libexec/cni/firewall", 0xc0005edf18, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/libexec/cni/firewall", 0xc0005fa038, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/local/lib/cni/firewall", 0xc0005fa108, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/lib/cni/firewall", 0xc0005fa1d8, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/opt/cni/bin/firewall", {st_mode=S_IFREG|0755, st_size=3172984, ...}, 0) = 0
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=117824, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+newfstatat(AT_FDCWD, "/usr/local/libexec/cni/tuning", 0xc0005fa378, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/libexec/cni/tuning", 0xc0005fa448, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/local/lib/cni/tuning", 0xc0005fa518, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/lib/cni/tuning", 0xc0005fa5e8, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/opt/cni/bin/tuning", {st_mode=S_IFREG|0755, st_size=2468312, ...}, 0) = 0
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=117829, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+openat(AT_FDCWD, "/run/libpod/alive.lck", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 8
+openat(AT_FDCWD, "/run/libpod/alive.lck", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 8
+newfstatat(AT_FDCWD, "/run/libpod/alive", {st_mode=S_IFREG|0644, st_size=0, ...}, 0) = 0
+statfs("/dev/shm/", {f_type=TMPFS_MAGIC, f_bsize=4096, f_blocks=125605, f_bfree=125584, f_bavail=125584, f_files=125605, f_ffree=125603, f_fsid={val=[0, 0]}, f_namelen=255, f_frsize=4096, f_flags=ST_VALID|ST_NOSUID|ST_NODEV}) = 0
+openat(AT_FDCWD, "/dev/shm/libpod_lock", O_RDWR|O_NOFOLLOW|O_CLOEXEC) = 9
+statfs("/proc/117807/task/117809/ns/net", {f_type=NSFS_MAGIC, f_bsize=4096, f_blocks=0, f_bfree=0, f_bavail=0, f_files=0, f_ffree=0, f_fsid={val=[0, 0]}, f_namelen=255, f_frsize=4096, f_flags=ST_VALID}) = 0
+openat(AT_FDCWD, "/proc/117807/task/117809/ns/net", O_RDONLY|O_CLOEXEC) = 11
+openat(AT_FDCWD, "/var/lib/containers/storage/storage.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 8
++++ exited with 0 +++

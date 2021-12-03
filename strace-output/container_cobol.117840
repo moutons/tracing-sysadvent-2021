@@ -1,0 +1,25 @@
+execve("/opt/cni/bin/firewall", ["/opt/cni/bin/firewall"], 0xc0005e3c20 /* 16 vars */) = 0
+access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libpthread.so.0", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/sys/kernel/mm/transparent_hugepage/hpage_pmd_size", O_RDONLY) = 3
+readlinkat(AT_FDCWD, "/proc/self/exe", "/opt/cni/bin/firewall", 128) = 21
+--- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=117840, si_uid=0} ---
+--- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=117840, si_uid=0} ---
+--- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=117840, si_uid=0} ---
+newfstatat(AT_FDCWD, "/usr/local/sbin/iptables", 0xc0000be9f8, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/local/bin/iptables", 0xc0000beac8, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/sbin/iptables", {st_mode=S_IFREG|0755, st_size=99296, ...}, 0) = 0
+openat(AT_FDCWD, "/dev/null", O_RDONLY|O_CLOEXEC) = 8
+openat(AT_FDCWD, "/dev/null", O_WRONLY|O_CLOEXEC) = 11
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=117845, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+newfstatat(AT_FDCWD, "/usr/local/sbin/ip6tables", 0xc0000bec68, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/local/bin/ip6tables", 0xc0000bed38, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/sbin/ip6tables", {st_mode=S_IFREG|0755, st_size=99296, ...}, 0) = 0
+openat(AT_FDCWD, "/dev/null", O_RDONLY|O_CLOEXEC) = 8
+openat(AT_FDCWD, "/dev/null", O_WRONLY|O_CLOEXEC) = 11
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=117846, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+openat(AT_FDCWD, "/dev/null", O_RDONLY|O_CLOEXEC) = 8
+openat(AT_FDCWD, "/dev/null", O_WRONLY|O_CLOEXEC) = 9
++++ exited with 0 +++

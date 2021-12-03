@@ -1,0 +1,20 @@
+execve("/usr/sbin/iptables", ["/usr/sbin/iptables", "-t", "filter", "-C", "CNI-FORWARD", "-m", "comment", "--comment", "CNI firewall plugin admin overri"..., "-j", "CNI-ADMIN", "--wait"], 0xc0000af9e0 /* 33 vars */) = 0
+access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libip4tc.so.2", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libip6tc.so.2", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libxtables.so.12", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libdl.so.2", O_RDONLY|O_CLOEXEC) = 3
+stat("/usr/lib/x86_64-linux-gnu/xtables/libipt_comment.so", 0x7ffc3ac41660) = -1 ENOENT (No such file or directory)
+stat("/usr/lib/x86_64-linux-gnu/xtables/libxt_comment.so", {st_mode=S_IFREG|0644, st_size=14776, ...}) = 0
+openat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/xtables/libxt_comment.so", O_RDONLY|O_CLOEXEC) = 3
+lstat("/proc/net/ip_tables_names", {st_mode=S_IFREG|0440, st_size=0, ...}) = 0
+statfs("/proc/net/ip_tables_names", {f_type=PROC_SUPER_MAGIC, f_bsize=4096, f_blocks=0, f_bfree=0, f_bavail=0, f_files=0, f_ffree=0, f_fsid={val=[0, 0]}, f_namelen=255, f_frsize=4096, f_flags=ST_VALID|ST_NOSUID|ST_NODEV|ST_NOEXEC|ST_RELATIME}) = 0
+stat("/usr/lib/x86_64-linux-gnu/xtables/libipt_CNI-ADMIN.so", 0x7ffc3ac41650) = -1 ENOENT (No such file or directory)
+stat("/usr/lib/x86_64-linux-gnu/xtables/libxt_CNI-ADMIN.so", 0x7ffc3ac41650) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/run/xtables.lock", O_RDONLY|O_CREAT, 0600) = 3
+stat("/usr/lib/x86_64-linux-gnu/xtables/libipt_standard.so", 0x7ffc3ac41680) = -1 ENOENT (No such file or directory)
+stat("/usr/lib/x86_64-linux-gnu/xtables/libxt_standard.so", {st_mode=S_IFREG|0644, st_size=14704, ...}) = 0
+openat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/xtables/libxt_standard.so", O_RDONLY|O_CLOEXEC) = 5
++++ exited with 0 +++

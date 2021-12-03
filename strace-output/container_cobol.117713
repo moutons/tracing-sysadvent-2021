@@ -1,0 +1,347 @@
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=117714, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+newfstatat(AT_FDCWD, "/usr/local/libexec/cni/portmap", 0xc0005e8448, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/libexec/cni/portmap", 0xc0005e8518, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/local/lib/cni/portmap", 0xc0005e85e8, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/lib/cni/portmap", 0xc0005e86b8, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/opt/cni/bin/portmap", {st_mode=S_IFREG|0755, st_size=2675000, ...}, 0) = 0
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=117719, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+newfstatat(AT_FDCWD, "/usr/local/libexec/cni/firewall", 0xc0005e8858, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/libexec/cni/firewall", 0xc0005e8928, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/local/lib/cni/firewall", 0xc0005e89f8, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/lib/cni/firewall", 0xc0005e8ac8, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/opt/cni/bin/firewall", {st_mode=S_IFREG|0755, st_size=3172984, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/var/lib/containers/storage/overlay-layers/layers.json", {st_mode=S_IFREG|0600, st_size=10148, ...}, 0) = 0
+openat(AT_FDCWD, "/var/lib/containers/storage/storage.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 7
+openat(AT_FDCWD, "/var/lib/containers/storage/storage.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 7
+newfstatat(AT_FDCWD, "/run/containers/storage/overlay-layers", {st_mode=S_IFDIR|0700, st_size=80, ...}, 0) = 0
+openat(AT_FDCWD, "/var/lib/containers/storage/overlay-layers/layers.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 7
+openat(AT_FDCWD, "/run/containers/storage/overlay-layers/mountpoints.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 8
+newfstatat(AT_FDCWD, "/var/lib/containers/storage/overlay-layers/layers.json", {st_mode=S_IFREG|0600, st_size=10148, ...}, 0) = 0
+openat(AT_FDCWD, "/var/lib/containers/storage/storage.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 7
+openat(AT_FDCWD, "/var/lib/containers/storage/storage.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 7
+newfstatat(AT_FDCWD, "/run/containers/storage/overlay-layers", {st_mode=S_IFDIR|0700, st_size=80, ...}, 0) = 0
+openat(AT_FDCWD, "/var/lib/containers/storage/overlay-layers/layers.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 7
+openat(AT_FDCWD, "/run/containers/storage/overlay-layers/mountpoints.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 8
+newfstatat(AT_FDCWD, "/var/lib/containers/storage/overlay-layers/layers.json", {st_mode=S_IFREG|0600, st_size=10148, ...}, 0) = 0
+openat(AT_FDCWD, "/var/lib/containers/storage/storage.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 7
+openat(AT_FDCWD, "/var/lib/containers/storage/storage.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 7
+newfstatat(AT_FDCWD, "/run/containers/storage/overlay-layers", {st_mode=S_IFDIR|0700, st_size=80, ...}, 0) = 0
+openat(AT_FDCWD, "/var/lib/containers/storage/overlay-layers/layers.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 7
+openat(AT_FDCWD, "/run/containers/storage/overlay-layers/mountpoints.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 8
+newfstatat(AT_FDCWD, "/var/lib/containers/storage/overlay-layers/layers.json", {st_mode=S_IFREG|0600, st_size=10148, ...}, 0) = 0
+openat(AT_FDCWD, "/var/lib/containers/storage/storage.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 7
+openat(AT_FDCWD, "/var/lib/containers/storage/storage.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 7
+newfstatat(AT_FDCWD, "/run/containers/storage/overlay-layers", {st_mode=S_IFDIR|0700, st_size=80, ...}, 0) = 0
+openat(AT_FDCWD, "/var/lib/containers/storage/overlay-layers/layers.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 7
+openat(AT_FDCWD, "/run/containers/storage/overlay-layers/mountpoints.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 8
+newfstatat(AT_FDCWD, "/var/lib/containers/storage/overlay-layers/layers.json", {st_mode=S_IFREG|0600, st_size=10148, ...}, 0) = 0
+openat(AT_FDCWD, "/var/lib/containers/storage/overlay-images/images.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 7
+openat(AT_FDCWD, "/var/lib/containers/storage/overlay-images/a205b963deaa1d471e6217f439e02ecea6be2a2250de9ed1ebfb7dec72e55d6a/=c2hhMjU2OmEyMDViOTYzZGVhYTFkNDcxZTYyMTdmNDM5ZTAyZWNlYTZiZTJhMjI1MGRlOWVkMWViZmI3ZGVjNzJlNTVkNmE=", O_RDONLY|O_CLOEXEC) = 8
+openat(AT_FDCWD, "/var/tmp/214739990", O_RDWR|O_CREAT|O_EXCL|O_CLOEXEC, 0600) = 7
+unlinkat(AT_FDCWD, "/var/tmp/214739990", 0) = 0
+openat(AT_FDCWD, "/var/lib/containers/storage/storage.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 7
+openat(AT_FDCWD, "/var/lib/containers/storage/overlay-layers/layers.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 7
+openat(AT_FDCWD, "/var/lib/containers/storage/overlay-layers/layers.json", O_RDONLY|O_CLOEXEC) = 8
+openat(AT_FDCWD, "/run/containers/storage/overlay-layers/mountpoints.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 8
+openat(AT_FDCWD, "/run/containers/storage/overlay-layers/mountpoints.json", O_RDONLY|O_CLOEXEC) = 9
+openat(AT_FDCWD, "/var/lib/containers/storage/storage.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 7
+newfstatat(AT_FDCWD, "/run/containers/storage/overlay-layers", {st_mode=S_IFDIR|0700, st_size=80, ...}, 0) = 0
+openat(AT_FDCWD, "/var/lib/containers/storage/overlay-images/images.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 7
+openat(AT_FDCWD, "/var/lib/containers/storage/overlay-images/images.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 7
+openat(AT_FDCWD, "/var/lib/containers/storage/overlay-images/images.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 7
+openat(AT_FDCWD, "/var/lib/containers/storage/overlay-images/a205b963deaa1d471e6217f439e02ecea6be2a2250de9ed1ebfb7dec72e55d6a/manifest", O_RDONLY|O_CLOEXEC) = 8
+openat(AT_FDCWD, "/var/lib/containers/storage/overlay-images/images.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 7
+openat(AT_FDCWD, "/var/lib/containers/storage/overlay-images/images.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 7
+openat(AT_FDCWD, "/var/lib/containers/storage/overlay-images/images.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 7
+openat(AT_FDCWD, "/var/lib/containers/storage/overlay-images/images.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 7
+openat(AT_FDCWD, "/var/lib/containers/storage/overlay-images/images.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 7
+openat(AT_FDCWD, "/var/lib/containers/storage/storage.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 7
+openat(AT_FDCWD, "/var/lib/containers/storage/storage.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 7
+newfstatat(AT_FDCWD, "/run/containers/storage/overlay-layers", {st_mode=S_IFDIR|0700, st_size=80, ...}, 0) = 0
+openat(AT_FDCWD, "/var/lib/containers/storage/overlay-layers/layers.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 7
+openat(AT_FDCWD, "/run/containers/storage/overlay-layers/mountpoints.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 8
+newfstatat(AT_FDCWD, "/var/lib/containers/storage/overlay-layers/layers.json", {st_mode=S_IFREG|0600, st_size=10148, ...}, 0) = 0
+openat(AT_FDCWD, "/var/lib/containers/storage/storage.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 7
+openat(AT_FDCWD, "/var/lib/containers/storage/storage.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 7
+newfstatat(AT_FDCWD, "/run/containers/storage/overlay-layers", {st_mode=S_IFDIR|0700, st_size=80, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/var/lib/containers/storage/overlay-layers/layers.json", {st_mode=S_IFREG|0600, st_size=10148, ...}, 0) = 0
+openat(AT_FDCWD, "/var/lib/containers/storage/storage.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 7
+openat(AT_FDCWD, "/var/lib/containers/storage/storage.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 7
+newfstatat(AT_FDCWD, "/run/containers/storage/overlay-layers", {st_mode=S_IFDIR|0700, st_size=80, ...}, 0) = 0
+openat(AT_FDCWD, "/var/lib/containers/storage/overlay-layers/layers.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 7
+openat(AT_FDCWD, "/run/containers/storage/overlay-layers/mountpoints.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 8
+newfstatat(AT_FDCWD, "/var/lib/containers/storage/overlay-layers/layers.json", {st_mode=S_IFREG|0600, st_size=10148, ...}, 0) = 0
+openat(AT_FDCWD, "/var/lib/containers/storage/storage.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 7
+openat(AT_FDCWD, "/var/lib/containers/storage/storage.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 7
+newfstatat(AT_FDCWD, "/run/containers/storage/overlay-layers", {st_mode=S_IFDIR|0700, st_size=80, ...}, 0) = 0
+openat(AT_FDCWD, "/var/lib/containers/storage/overlay-layers/layers.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 7
+openat(AT_FDCWD, "/run/containers/storage/overlay-layers/mountpoints.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 8
+newfstatat(AT_FDCWD, "/var/lib/containers/storage/overlay-layers/layers.json", {st_mode=S_IFREG|0600, st_size=10148, ...}, 0) = 0
+openat(AT_FDCWD, "/var/lib/containers/storage/storage.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 7
+openat(AT_FDCWD, "/var/lib/containers/storage/storage.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 7
+newfstatat(AT_FDCWD, "/run/containers/storage/overlay-layers", {st_mode=S_IFDIR|0700, st_size=80, ...}, 0) = 0
+openat(AT_FDCWD, "/var/lib/containers/storage/overlay-layers/layers.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 7
+openat(AT_FDCWD, "/run/containers/storage/overlay-layers/mountpoints.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 8
+newfstatat(AT_FDCWD, "/var/lib/containers/storage/overlay-layers/layers.json", {st_mode=S_IFREG|0600, st_size=10148, ...}, 0) = 0
+openat(AT_FDCWD, "/var/lib/containers/storage/storage.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 7
+openat(AT_FDCWD, "/var/lib/containers/storage/storage.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 7
+newfstatat(AT_FDCWD, "/run/containers/storage/overlay-layers", {st_mode=S_IFDIR|0700, st_size=80, ...}, 0) = 0
+openat(AT_FDCWD, "/var/lib/containers/storage/overlay-layers/layers.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 7
+openat(AT_FDCWD, "/run/containers/storage/overlay-layers/mountpoints.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 8
+newfstatat(AT_FDCWD, "/var/lib/containers/storage/overlay-layers/layers.json", {st_mode=S_IFREG|0600, st_size=10148, ...}, 0) = 0
+openat(AT_FDCWD, "/var/lib/containers/storage/storage.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 7
+openat(AT_FDCWD, "/var/lib/containers/storage/storage.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 7
+newfstatat(AT_FDCWD, "/run/containers/storage/overlay-layers", {st_mode=S_IFDIR|0700, st_size=80, ...}, 0) = 0
+openat(AT_FDCWD, "/var/lib/containers/storage/overlay-layers/layers.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 7
+openat(AT_FDCWD, "/run/containers/storage/overlay-layers/mountpoints.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 8
+newfstatat(AT_FDCWD, "/var/lib/containers/storage/overlay-layers/layers.json", {st_mode=S_IFREG|0600, st_size=10148, ...}, 0) = 0
+openat(AT_FDCWD, "/var/lib/containers/storage/overlay-images/images.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 7
+openat(AT_FDCWD, "/var/lib/containers/storage/overlay-images/a205b963deaa1d471e6217f439e02ecea6be2a2250de9ed1ebfb7dec72e55d6a/=c2hhMjU2OmEyMDViOTYzZGVhYTFkNDcxZTYyMTdmNDM5ZTAyZWNlYTZiZTJhMjI1MGRlOWVkMWViZmI3ZGVjNzJlNTVkNmE=", O_RDONLY|O_CLOEXEC) = 8
+openat(AT_FDCWD, "/var/tmp/282920376", O_RDWR|O_CREAT|O_EXCL|O_CLOEXEC, 0600) = 7
+unlinkat(AT_FDCWD, "/var/tmp/282920376", 0) = 0
+--- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=117706, si_uid=0} ---
+--- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=117706, si_uid=0} ---
+--- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=117706, si_uid=0} ---
+--- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=117706, si_uid=0} ---
+--- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=117706, si_uid=0} ---
+newfstatat(AT_FDCWD, "/etc/containers/seccomp.json", 0xc00044dca8, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/share/containers/seccomp.json", {st_mode=S_IFREG|0644, st_size=15982, ...}, 0) = 0
+statfs("/sys/fs/cgroup", {f_type=TMPFS_MAGIC, f_bsize=4096, f_blocks=125605, f_bfree=125605, f_bavail=125605, f_files=125605, f_ffree=125587, f_fsid={val=[0, 0]}, f_namelen=255, f_frsize=4096, f_flags=ST_VALID|ST_RDONLY|ST_NOSUID|ST_NODEV|ST_NOEXEC}) = 0
+openat(AT_FDCWD, "/proc/self/mountinfo", O_RDONLY|O_CLOEXEC) = 7
+openat(AT_FDCWD, "/proc/self/cgroup", O_RDONLY|O_CLOEXEC) = 7
+newfstatat(AT_FDCWD, "/sys/fs/cgroup/memory/memory.memsw.limit_in_bytes", 0xc00044de48, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/sys/fs/cgroup/memory/memory.soft_limit_in_bytes", {st_mode=S_IFREG|0644, st_size=0, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/sys/fs/cgroup/memory/memory.oom_control", {st_mode=S_IFREG|0644, st_size=0, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/sys/fs/cgroup/memory/memory.swappiness", {st_mode=S_IFREG|0644, st_size=0, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/sys/fs/cgroup/memory/memory.kmem.limit_in_bytes", {st_mode=S_IFREG|0644, st_size=0, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/sys/fs/cgroup/cpu,cpuacct/cpu.shares", {st_mode=S_IFREG|0644, st_size=0, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/sys/fs/cgroup/cpu,cpuacct/cpu.cfs_period_us", {st_mode=S_IFREG|0644, st_size=0, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/sys/fs/cgroup/cpu,cpuacct/cpu.cfs_quota_us", {st_mode=S_IFREG|0644, st_size=0, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/sys/fs/cgroup/cpu,cpuacct/cpu.rt_period_us", 0xc00009e5e8, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/sys/fs/cgroup/cpu,cpuacct/cpu.rt_runtime_us", 0xc00009e6b8, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/sys/fs/cgroup/blkio/blkio.weight", 0xc00009e788, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/sys/fs/cgroup/blkio/blkio.weight_device", 0xc00009f148, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/sys/fs/cgroup/blkio/blkio.throttle.read_bps_device", {st_mode=S_IFREG|0644, st_size=0, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/sys/fs/cgroup/blkio/blkio.throttle.write_bps_device", {st_mode=S_IFREG|0644, st_size=0, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/sys/fs/cgroup/blkio/blkio.throttle.read_iops_device", {st_mode=S_IFREG|0644, st_size=0, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/sys/fs/cgroup/blkio/blkio.throttle.write_iops_device", {st_mode=S_IFREG|0644, st_size=0, ...}, 0) = 0
+openat(AT_FDCWD, "/sys/fs/cgroup/cpuset/cpuset.cpus", O_RDONLY|O_CLOEXEC) = 7
+openat(AT_FDCWD, "/sys/fs/cgroup/cpuset/cpuset.mems", O_RDONLY|O_CLOEXEC) = 7
+openat(AT_FDCWD, "/proc/sys/net/ipv4/ip_forward", O_RDONLY|O_CLOEXEC) = 7
+openat(AT_FDCWD, "/proc/sys/net/bridge/bridge-nf-call-iptables", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/proc/sys/net/bridge/bridge-nf-call-ip6tables", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/sys/kernel/security/apparmor", {st_mode=S_IFDIR|0755, st_size=0, ...}, 0) = 0
+openat(AT_FDCWD, "/var/lib/containers/storage/overlay-images/images.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 7
+newfstatat(AT_FDCWD, "/var/cache/containers", {st_mode=S_IFDIR|0700, st_size=4096, ...}, 0) = 0
+openat(AT_FDCWD, "/var/cache/containers/short-name-aliases.conf.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 7
+openat(AT_FDCWD, "/var/cache/containers/short-name-aliases.conf", O_RDONLY|O_CLOEXEC) = 8
+newfstatat(AT_FDCWD, "/root/.config/containers/registries.conf", 0xc0003dbbd8, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/root/.config/containers/registries.conf", 0xc0003dbca8, 0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/var/lib/containers/storage/overlay-images/images.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 7
+openat(AT_FDCWD, "/var/lib/containers/storage/overlay-images/images.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 7
+openat(AT_FDCWD, "/var/lib/containers/storage/overlay-images/images.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 7
+openat(AT_FDCWD, "/var/lib/containers/storage/overlay-images/images.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 7
+openat(AT_FDCWD, "/var/lib/containers/storage/overlay-images/images.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 7
+openat(AT_FDCWD, "/var/lib/containers/storage/overlay-images/images.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 7
+openat(AT_FDCWD, "/var/lib/containers/storage/overlay-images/images.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 7
+openat(AT_FDCWD, "/var/lib/containers/storage/overlay-images/images.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 7
+openat(AT_FDCWD, "/var/lib/containers/storage/overlay-images/images.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 7
+openat(AT_FDCWD, "/var/lib/containers/storage/overlay-images/a205b963deaa1d471e6217f439e02ecea6be2a2250de9ed1ebfb7dec72e55d6a/manifest", O_RDONLY|O_CLOEXEC) = 8
+openat(AT_FDCWD, "/var/lib/containers/storage/overlay-images/images.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 7
+openat(AT_FDCWD, "/var/lib/containers/storage/overlay-images/images.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 7
+openat(AT_FDCWD, "/var/lib/containers/storage/overlay-images/a205b963deaa1d471e6217f439e02ecea6be2a2250de9ed1ebfb7dec72e55d6a/manifest", O_RDONLY|O_CLOEXEC) = 8
+openat(AT_FDCWD, "/var/lib/containers/storage/overlay-images/images.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 7
+openat(AT_FDCWD, "/var/lib/containers/storage/overlay-images/images.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 7
+openat(AT_FDCWD, "/var/lib/containers/storage/overlay-images/images.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 7
+openat(AT_FDCWD, "/var/lib/containers/storage/overlay-images/images.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 7
+openat(AT_FDCWD, "/var/lib/containers/storage/overlay-images/images.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 7
+openat(AT_FDCWD, "/var/lib/containers/storage/storage.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 7
+openat(AT_FDCWD, "/var/lib/containers/storage/storage.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 7
+newfstatat(AT_FDCWD, "/run/containers/storage/overlay-layers", {st_mode=S_IFDIR|0700, st_size=80, ...}, 0) = 0
+openat(AT_FDCWD, "/var/lib/containers/storage/overlay-layers/layers.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 7
+openat(AT_FDCWD, "/run/containers/storage/overlay-layers/mountpoints.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 8
+newfstatat(AT_FDCWD, "/var/lib/containers/storage/overlay-layers/layers.json", {st_mode=S_IFREG|0600, st_size=10148, ...}, 0) = 0
+openat(AT_FDCWD, "/var/lib/containers/storage/storage.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 7
+openat(AT_FDCWD, "/var/lib/containers/storage/storage.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 7
+newfstatat(AT_FDCWD, "/run/containers/storage/overlay-layers", {st_mode=S_IFDIR|0700, st_size=80, ...}, 0) = 0
+openat(AT_FDCWD, "/var/lib/containers/storage/overlay-layers/layers.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 7
+openat(AT_FDCWD, "/run/containers/storage/overlay-layers/mountpoints.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 8
+newfstatat(AT_FDCWD, "/var/lib/containers/storage/overlay-layers/layers.json", {st_mode=S_IFREG|0600, st_size=10148, ...}, 0) = 0
+openat(AT_FDCWD, "/var/lib/containers/storage/storage.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 7
+openat(AT_FDCWD, "/var/lib/containers/storage/storage.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 7
+newfstatat(AT_FDCWD, "/run/containers/storage/overlay-layers", {st_mode=S_IFDIR|0700, st_size=80, ...}, 0) = 0
+openat(AT_FDCWD, "/var/lib/containers/storage/overlay-layers/layers.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 7
+openat(AT_FDCWD, "/run/containers/storage/overlay-layers/mountpoints.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 8
+newfstatat(AT_FDCWD, "/var/lib/containers/storage/overlay-layers/layers.json", {st_mode=S_IFREG|0600, st_size=10148, ...}, 0) = 0
+openat(AT_FDCWD, "/var/lib/containers/storage/storage.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 7
+openat(AT_FDCWD, "/var/lib/containers/storage/storage.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 7
+newfstatat(AT_FDCWD, "/run/containers/storage/overlay-layers", {st_mode=S_IFDIR|0700, st_size=80, ...}, 0) = 0
+openat(AT_FDCWD, "/var/lib/containers/storage/overlay-layers/layers.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 7
+openat(AT_FDCWD, "/run/containers/storage/overlay-layers/mountpoints.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 8
+newfstatat(AT_FDCWD, "/var/lib/containers/storage/overlay-layers/layers.json", {st_mode=S_IFREG|0600, st_size=10148, ...}, 0) = 0
+openat(AT_FDCWD, "/var/lib/containers/storage/storage.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 7
+openat(AT_FDCWD, "/var/lib/containers/storage/storage.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 7
+newfstatat(AT_FDCWD, "/run/containers/storage/overlay-layers", {st_mode=S_IFDIR|0700, st_size=80, ...}, 0) = 0
+openat(AT_FDCWD, "/var/lib/containers/storage/overlay-layers/layers.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 7
+openat(AT_FDCWD, "/run/containers/storage/overlay-layers/mountpoints.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 8
+newfstatat(AT_FDCWD, "/var/lib/containers/storage/overlay-layers/layers.json", {st_mode=S_IFREG|0600, st_size=10148, ...}, 0) = 0
+openat(AT_FDCWD, "/var/lib/containers/storage/storage.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 7
+openat(AT_FDCWD, "/var/lib/containers/storage/storage.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 7
+newfstatat(AT_FDCWD, "/run/containers/storage/overlay-layers", {st_mode=S_IFDIR|0700, st_size=80, ...}, 0) = 0
+openat(AT_FDCWD, "/var/lib/containers/storage/overlay-layers/layers.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 7
+openat(AT_FDCWD, "/run/containers/storage/overlay-layers/mountpoints.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 8
+openat(AT_FDCWD, "/var/lib/containers/storage/overlay-images/images.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 7
+openat(AT_FDCWD, "/var/lib/containers/storage/overlay-images/images.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 7
+openat(AT_FDCWD, "/var/lib/containers/storage/storage.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 7
+openat(AT_FDCWD, "/var/lib/containers/storage/storage.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 7
+newfstatat(AT_FDCWD, "/run/containers/storage/overlay-layers", {st_mode=S_IFDIR|0700, st_size=80, ...}, 0) = 0
+openat(AT_FDCWD, "/var/lib/containers/storage/overlay-layers/layers.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 7
+openat(AT_FDCWD, "/run/containers/storage/overlay-layers/mountpoints.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 8
+newfstatat(AT_FDCWD, "/var/lib/containers/storage/overlay-layers/layers.json", {st_mode=S_IFREG|0600, st_size=10148, ...}, 0) = 0
+openat(AT_FDCWD, "/var/lib/containers/storage/storage.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 7
+openat(AT_FDCWD, "/var/lib/containers/storage/storage.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 7
+newfstatat(AT_FDCWD, "/run/containers/storage/overlay-layers", {st_mode=S_IFDIR|0700, st_size=80, ...}, 0) = 0
+openat(AT_FDCWD, "/var/lib/containers/storage/overlay-layers/layers.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 7
+openat(AT_FDCWD, "/run/containers/storage/overlay-layers/mountpoints.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 8
+newfstatat(AT_FDCWD, "/var/lib/containers/storage/overlay-layers/layers.json", {st_mode=S_IFREG|0600, st_size=10148, ...}, 0) = 0
+openat(AT_FDCWD, "/var/lib/containers/storage/storage.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 7
+openat(AT_FDCWD, "/var/lib/containers/storage/storage.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 7
+newfstatat(AT_FDCWD, "/run/containers/storage/overlay-layers", {st_mode=S_IFDIR|0700, st_size=80, ...}, 0) = 0
+openat(AT_FDCWD, "/var/lib/containers/storage/overlay-layers/layers.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 7
+openat(AT_FDCWD, "/run/containers/storage/overlay-layers/mountpoints.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 8
+newfstatat(AT_FDCWD, "/var/lib/containers/storage/overlay-layers/layers.json", {st_mode=S_IFREG|0600, st_size=10148, ...}, 0) = 0
+openat(AT_FDCWD, "/var/lib/containers/storage/storage.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 7
+openat(AT_FDCWD, "/var/lib/containers/storage/storage.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 7
+newfstatat(AT_FDCWD, "/run/containers/storage/overlay-layers", {st_mode=S_IFDIR|0700, st_size=80, ...}, 0) = 0
+openat(AT_FDCWD, "/var/lib/containers/storage/overlay-layers/layers.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 7
+openat(AT_FDCWD, "/run/containers/storage/overlay-layers/mountpoints.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 8
+newfstatat(AT_FDCWD, "/var/lib/containers/storage/overlay-layers/layers.json", {st_mode=S_IFREG|0600, st_size=10148, ...}, 0) = 0
+openat(AT_FDCWD, "/var/lib/containers/storage/storage.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 7
+openat(AT_FDCWD, "/var/lib/containers/storage/storage.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 7
+newfstatat(AT_FDCWD, "/run/containers/storage/overlay-layers", {st_mode=S_IFDIR|0700, st_size=80, ...}, 0) = 0
+openat(AT_FDCWD, "/var/lib/containers/storage/overlay-layers/layers.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 7
+openat(AT_FDCWD, "/run/containers/storage/overlay-layers/mountpoints.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 8
+newfstatat(AT_FDCWD, "/var/lib/containers/storage/overlay-layers/layers.json", {st_mode=S_IFREG|0600, st_size=10148, ...}, 0) = 0
+openat(AT_FDCWD, "/var/lib/containers/storage/storage.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 7
+openat(AT_FDCWD, "/var/lib/containers/storage/storage.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 7
+newfstatat(AT_FDCWD, "/run/containers/storage/overlay-layers", {st_mode=S_IFDIR|0700, st_size=80, ...}, 0) = 0
+openat(AT_FDCWD, "/var/lib/containers/storage/overlay-layers/layers.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 7
+openat(AT_FDCWD, "/run/containers/storage/overlay-layers/mountpoints.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 8
+newfstatat(AT_FDCWD, "/var/lib/containers/storage/overlay-layers/layers.json", {st_mode=S_IFREG|0600, st_size=10148, ...}, 0) = 0
+openat(AT_FDCWD, "/var/lib/containers/storage/overlay-images/images.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 7
+openat(AT_FDCWD, "/var/lib/containers/storage/overlay-images/a205b963deaa1d471e6217f439e02ecea6be2a2250de9ed1ebfb7dec72e55d6a/=c2hhMjU2OmEyMDViOTYzZGVhYTFkNDcxZTYyMTdmNDM5ZTAyZWNlYTZiZTJhMjI1MGRlOWVkMWViZmI3ZGVjNzJlNTVkNmE=", O_RDONLY|O_CLOEXEC) = 8
+openat(AT_FDCWD, "/var/tmp/921495297", O_RDWR|O_CREAT|O_EXCL|O_CLOEXEC, 0600) = 7
+unlinkat(AT_FDCWD, "/var/tmp/921495297", 0) = 0
+openat(AT_FDCWD, "/var/lib/containers/storage/storage.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 7
+newfstatat(AT_FDCWD, "/var/lib/containers/storage/overlay/aa6723798906b66c2bac46bf1de910026d188bb0754ca5d1b2f5acc1784fc4cd", {st_mode=S_IFDIR|0700, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/var/lib/containers/storage/overlay/aa6723798906b66c2bac46bf1de910026d188bb0754ca5d1b2f5acc1784fc4cd", {st_mode=S_IFDIR|0700, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/var/lib/containers/storage/overlay/aa6723798906b66c2bac46bf1de910026d188bb0754ca5d1b2f5acc1784fc4cd", {st_mode=S_IFDIR|0700, st_size=4096, ...}, 0) = 0
+openat(AT_FDCWD, "/var/lib/containers/storage/overlay/aa6723798906b66c2bac46bf1de910026d188bb0754ca5d1b2f5acc1784fc4cd/lower", O_RDONLY|O_CLOEXEC) = 7
+newfstatat(AT_FDCWD, "/var/lib/containers/storage/overlay/l/55G2NCHDMCYFABMLTGWIRW6EEC", {st_mode=S_IFDIR|0555, st_size=4096, ...}, 0) = 0
+readlinkat(AT_FDCWD, "/var/lib/containers/storage/overlay/l/55G2NCHDMCYFABMLTGWIRW6EEC", "../a50fa755ad1071c9f69bc088dc66e"..., 128) = 72
+newfstatat(AT_FDCWD, "/var/lib/containers/storage/overlay/a50fa755ad1071c9f69bc088dc66ec52010f7f405d5832a3fb5591830dbe34e5/diff", {st_mode=S_IFDIR|0555, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/var/lib/containers/storage/overlay/l/RTA4GB7VHDGZHR7ZXING74MLU5", {st_mode=S_IFDIR|0555, st_size=4096, ...}, 0) = 0
+readlinkat(AT_FDCWD, "/var/lib/containers/storage/overlay/l/RTA4GB7VHDGZHR7ZXING74MLU5", "../37d5cd23ecc8f3fa424fa19bdaedd"..., 128) = 72
+newfstatat(AT_FDCWD, "/var/lib/containers/storage/overlay/37d5cd23ecc8f3fa424fa19bdaedd07df81cc49ce2b208ab16f8ca404c09f68c/diff", {st_mode=S_IFDIR|0555, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/var/lib/containers/storage/overlay/l/6FDI4DJS5LOUSSM6DTAOUSOFXX", {st_mode=S_IFDIR|0555, st_size=4096, ...}, 0) = 0
+readlinkat(AT_FDCWD, "/var/lib/containers/storage/overlay/l/6FDI4DJS5LOUSSM6DTAOUSOFXX", "../ed847aae4910db6701b46cdb8b046"..., 128) = 72
+newfstatat(AT_FDCWD, "/var/lib/containers/storage/overlay/ed847aae4910db6701b46cdb8b046f9702c13ac7902c7336d996c99cad9440d9/diff", {st_mode=S_IFDIR|0555, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/var/lib/containers/storage/overlay/l/2Z2ND4MMJFH553QUGOYGSQDPF6", {st_mode=S_IFDIR|0555, st_size=4096, ...}, 0) = 0
+readlinkat(AT_FDCWD, "/var/lib/containers/storage/overlay/l/2Z2ND4MMJFH553QUGOYGSQDPF6", "../5bb0785f2eee7f27e4c6d9ac3e7f0"..., 128) = 72
+newfstatat(AT_FDCWD, "/var/lib/containers/storage/overlay/5bb0785f2eee7f27e4c6d9ac3e7f05838e243d22feb827b55d70762f1eb4781a/diff", {st_mode=S_IFDIR|0555, st_size=4096, ...}, 0) = 0
+openat(AT_FDCWD, "/var/lib/containers/storage/overlay-containers/containers.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 7
+openat(AT_FDCWD, "/var/lib/containers/storage/storage.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 7
+openat(AT_FDCWD, "/var/lib/containers/storage/overlay-layers/layers.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 7
+openat(AT_FDCWD, "/run/containers/storage/overlay-layers/mountpoints.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 8
+newfstatat(AT_FDCWD, "/var/lib/containers/storage/overlay-layers/layers.json", {st_mode=S_IFREG|0600, st_size=10148, ...}, 0) = 0
+openat(AT_FDCWD, "/run/containers/storage/overlay-layers/mountpoints.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 8
+openat(AT_FDCWD, "/var/lib/containers/storage/overlay-images/images.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 7
+openat(AT_FDCWD, "/var/lib/containers/storage/overlay-images/images.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 7
+openat(AT_FDCWD, "/var/lib/containers/storage/overlay-images/a205b963deaa1d471e6217f439e02ecea6be2a2250de9ed1ebfb7dec72e55d6a/manifest", O_RDONLY|O_CLOEXEC) = 8
+openat(AT_FDCWD, "/var/lib/containers/storage/overlay-images/images.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 7
+openat(AT_FDCWD, "/var/lib/containers/storage/overlay-images/images.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 7
+openat(AT_FDCWD, "/var/lib/containers/storage/overlay-images/a205b963deaa1d471e6217f439e02ecea6be2a2250de9ed1ebfb7dec72e55d6a/manifest", O_RDONLY|O_CLOEXEC) = 8
+openat(AT_FDCWD, "/var/lib/containers/storage/overlay-images/images.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 7
+openat(AT_FDCWD, "/var/lib/containers/storage/overlay-images/images.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 7
+openat(AT_FDCWD, "/var/lib/containers/storage/overlay-images/images.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 7
+openat(AT_FDCWD, "/var/lib/containers/storage/overlay-images/images.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 7
+openat(AT_FDCWD, "/var/lib/containers/storage/overlay-images/images.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 7
+openat(AT_FDCWD, "/var/lib/containers/storage/storage.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 7
+openat(AT_FDCWD, "/var/lib/containers/storage/storage.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 7
+newfstatat(AT_FDCWD, "/run/containers/storage/overlay-layers", {st_mode=S_IFDIR|0700, st_size=80, ...}, 0) = 0
+openat(AT_FDCWD, "/var/lib/containers/storage/overlay-layers/layers.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 7
+openat(AT_FDCWD, "/run/containers/storage/overlay-layers/mountpoints.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 8
+openat(AT_FDCWD, "/var/lib/containers/storage/libpod/bolt_state.db", O_RDWR|O_CREAT|O_CLOEXEC, 0600) = 7
+openat(AT_FDCWD, "/var/lib/containers/storage/libpod/bolt_state.db", O_RDWR|O_CREAT|O_CLOEXEC, 0600) = 8
+unlinkat(AT_FDCWD, "/var/lib/containers/storage/overlay-containers/a48322315fe15b9911ae4ff331c72139274a0135f452259161dfea4342490532/userdata/attach", 0) = -1 ENOENT (No such file or directory)
+unlinkat(AT_FDCWD, "/var/lib/containers/storage/overlay-containers/a48322315fe15b9911ae4ff331c72139274a0135f452259161dfea4342490532/userdata/attach", AT_REMOVEDIR) = -1 ENOENT (No such file or directory)
+unlinkat(AT_FDCWD, "/var/lib/containers/storage/overlay-containers/a48322315fe15b9911ae4ff331c72139274a0135f452259161dfea4342490532/userdata/ctl", 0) = -1 ENOENT (No such file or directory)
+unlinkat(AT_FDCWD, "/var/lib/containers/storage/overlay-containers/a48322315fe15b9911ae4ff331c72139274a0135f452259161dfea4342490532/userdata/ctl", AT_REMOVEDIR) = -1 ENOENT (No such file or directory)
+unlinkat(AT_FDCWD, "/var/lib/containers/storage/overlay-containers/a48322315fe15b9911ae4ff331c72139274a0135f452259161dfea4342490532/userdata/winsz", 0) = -1 ENOENT (No such file or directory)
+unlinkat(AT_FDCWD, "/var/lib/containers/storage/overlay-containers/a48322315fe15b9911ae4ff331c72139274a0135f452259161dfea4342490532/userdata/winsz", AT_REMOVEDIR) = -1 ENOENT (No such file or directory)
+unlinkat(AT_FDCWD, "/var/lib/containers/storage/overlay-containers/a48322315fe15b9911ae4ff331c72139274a0135f452259161dfea4342490532/userdata/oom", 0) = -1 ENOENT (No such file or directory)
+unlinkat(AT_FDCWD, "/var/lib/containers/storage/overlay-containers/a48322315fe15b9911ae4ff331c72139274a0135f452259161dfea4342490532/userdata/oom", AT_REMOVEDIR) = -1 ENOENT (No such file or directory)
+unlinkat(AT_FDCWD, "/run/libpod/exits/a48322315fe15b9911ae4ff331c72139274a0135f452259161dfea4342490532", 0) = -1 ENOENT (No such file or directory)
+unlinkat(AT_FDCWD, "/run/libpod/exits/a48322315fe15b9911ae4ff331c72139274a0135f452259161dfea4342490532", AT_REMOVEDIR) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/var/lib/containers/storage/overlay/52e81be9293b60fb4d67fee4240fc72caeefa8f65b2248d8a9c758f5d6a80d62/merged/etc", {st_mode=S_IFDIR|0755, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/var/lib/containers/storage/overlay/52e81be9293b60fb4d67fee4240fc72caeefa8f65b2248d8a9c758f5d6a80d62/merged/etc/passwd", {st_mode=S_IFREG|0644, st_size=919, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/var/lib/containers/storage/overlay/52e81be9293b60fb4d67fee4240fc72caeefa8f65b2248d8a9c758f5d6a80d62/merged/etc", {st_mode=S_IFDIR|0755, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0
+newfstatat(AT_FDCWD, "/var/lib/containers/storage/overlay/52e81be9293b60fb4d67fee4240fc72caeefa8f65b2248d8a9c758f5d6a80d62/merged/etc/group", {st_mode=S_IFREG|0644, st_size=446, ...}, AT_SYMLINK_NOFOLLOW) = 0
+openat(AT_FDCWD, "/var/lib/containers/storage/overlay/52e81be9293b60fb4d67fee4240fc72caeefa8f65b2248d8a9c758f5d6a80d62/merged/etc/passwd", O_RDONLY|O_CLOEXEC) = 8
+openat(AT_FDCWD, "/var/lib/containers/storage/overlay/52e81be9293b60fb4d67fee4240fc72caeefa8f65b2248d8a9c758f5d6a80d62/merged/etc/group", O_RDONLY|O_CLOEXEC) = 9
+openat(AT_FDCWD, "/sys/kernel/security/apparmor/profiles", O_RDONLY|O_CLOEXEC) = 8
+fchownat(AT_FDCWD, "/run/containers/storage/overlay-containers/a48322315fe15b9911ae4ff331c72139274a0135f452259161dfea4342490532/userdata", 0, 0, 0) = 0
+newfstatat(AT_FDCWD, "/etc/netns/cni-27ee0cd3-c48f-bafc-d43c-ec8c34157c47/resolv.conf", 0xc0005e8108, 0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/etc/resolv.conf", O_RDONLY|O_CLOEXEC) = 8
+openat(AT_FDCWD, "/run/systemd/resolve/resolv.conf", O_RDONLY|O_CLOEXEC) = 8
+unlinkat(AT_FDCWD, "/run/containers/storage/overlay-containers/a48322315fe15b9911ae4ff331c72139274a0135f452259161dfea4342490532/userdata/resolv.conf", 0) = -1 ENOENT (No such file or directory)
+unlinkat(AT_FDCWD, "/run/containers/storage/overlay-containers/a48322315fe15b9911ae4ff331c72139274a0135f452259161dfea4342490532/userdata/resolv.conf", AT_REMOVEDIR) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/run/containers/storage/overlay-containers/a48322315fe15b9911ae4ff331c72139274a0135f452259161dfea4342490532/userdata/resolv.conf", O_WRONLY|O_CREAT|O_TRUNC|O_CLOEXEC, 0644) = 8
+openat(AT_FDCWD, "/etc/hosts", O_RDONLY|O_CLOEXEC) = 8
+unlinkat(AT_FDCWD, "/run/containers/storage/overlay-containers/a48322315fe15b9911ae4ff331c72139274a0135f452259161dfea4342490532/userdata/hosts", 0) = -1 ENOENT (No such file or directory)
+unlinkat(AT_FDCWD, "/run/containers/storage/overlay-containers/a48322315fe15b9911ae4ff331c72139274a0135f452259161dfea4342490532/userdata/hosts", AT_REMOVEDIR) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/run/containers/storage/overlay-containers/a48322315fe15b9911ae4ff331c72139274a0135f452259161dfea4342490532/userdata/hosts", O_RDWR|O_CREAT|O_TRUNC|O_CLOEXEC, 0666) = 8
+unlinkat(AT_FDCWD, "/run/containers/storage/overlay-containers/a48322315fe15b9911ae4ff331c72139274a0135f452259161dfea4342490532/userdata/hostname", 0) = -1 ENOENT (No such file or directory)
+unlinkat(AT_FDCWD, "/run/containers/storage/overlay-containers/a48322315fe15b9911ae4ff331c72139274a0135f452259161dfea4342490532/userdata/hostname", AT_REMOVEDIR) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/run/containers/storage/overlay-containers/a48322315fe15b9911ae4ff331c72139274a0135f452259161dfea4342490532/userdata/hostname", O_RDWR|O_CREAT|O_TRUNC|O_CLOEXEC, 0666) = 8
+unlinkat(AT_FDCWD, "/run/containers/storage/overlay-containers/a48322315fe15b9911ae4ff331c72139274a0135f452259161dfea4342490532/userdata/.containerenv", 0) = -1 ENOENT (No such file or directory)
+unlinkat(AT_FDCWD, "/run/containers/storage/overlay-containers/a48322315fe15b9911ae4ff331c72139274a0135f452259161dfea4342490532/userdata/.containerenv", AT_REMOVEDIR) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/run/containers/storage/overlay-containers/a48322315fe15b9911ae4ff331c72139274a0135f452259161dfea4342490532/userdata/.containerenv", O_RDWR|O_CREAT|O_TRUNC|O_CLOEXEC, 0666) = 8
+newfstatat(AT_FDCWD, "/etc/containers/mounts.conf", 0xc0005e8518, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/share/containers/mounts.conf", {st_mode=S_IFREG|0644, st_size=0, ...}, 0) = 0
+openat(AT_FDCWD, "/usr/share/containers/mounts.conf", O_RDONLY|O_CLOEXEC) = 8
+newfstatat(AT_FDCWD, "/etc/system-fips", 0xc0005e86b8, 0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/proc/self/uid_map", O_RDONLY|O_CLOEXEC) = 8
+openat(AT_FDCWD, "/proc/self/gid_map", O_RDONLY|O_CLOEXEC) = 8
+newfstatat(AT_FDCWD, "/var/lib/containers/storage/overlay/52e81be9293b60fb4d67fee4240fc72caeefa8f65b2248d8a9c758f5d6a80d62/merged/dev", {st_mode=S_IFDIR|0755, st_size=4096, ...}, AT_SYMLINK_NOFOLLOW) = 0
+openat(AT_FDCWD, "/usr/share/containers/oci/hooks.d", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/var/lib/containers/storage/overlay/52e81be9293b60fb4d67fee4240fc72caeefa8f65b2248d8a9c758f5d6a80d62/merged", {st_mode=S_IFDIR|0555, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/var/lib/containers/storage/overlay-containers/a48322315fe15b9911ae4ff331c72139274a0135f452259161dfea4342490532/userdata/config.json", 0xc00032fbd8, 0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/var/lib/containers/storage/overlay-containers/a48322315fe15b9911ae4ff331c72139274a0135f452259161dfea4342490532/userdata/config.json", O_WRONLY|O_CREAT|O_TRUNC|O_CLOEXEC, 0644) = 8
+--- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=117706, si_uid=0} ---
+--- SIGURG {si_signo=SIGURG, si_code=SI_TKILL, si_pid=117706, si_uid=0} ---
+newfstatat(AT_FDCWD, "/run/containers/storage/overlay-containers/a48322315fe15b9911ae4ff331c72139274a0135f452259161dfea4342490532/userdata", {st_mode=S_IFDIR|0700, st_size=120, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/run/containers/storage/overlay-containers/a48322315fe15b9911ae4ff331c72139274a0135f452259161dfea4342490532", {st_mode=S_IFDIR|0700, st_size=60, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/run/containers/storage/overlay-containers", {st_mode=S_IFDIR|0700, st_size=140, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/run/containers/storage", {st_mode=S_IFDIR|0700, st_size=120, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/run/containers", {st_mode=S_IFDIR|0700, st_size=60, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/run", {st_mode=S_IFDIR|0755, st_size=1060, ...}, 0) = 0
+openat(AT_FDCWD, "/run/containers/storage/overlay-containers/a48322315fe15b9911ae4ff331c72139274a0135f452259161dfea4342490532/userdata/conmon.pid", O_RDONLY|O_CLOEXEC) = 8
+openat(AT_FDCWD, "/var/lib/containers/storage/libpod/bolt_state.db", O_RDWR|O_CREAT|O_CLOEXEC, 0600) = 8
+inotify_add_watch(8, "/run/libpod/exits", IN_MODIFY|IN_ATTRIB|IN_MOVED_FROM|IN_MOVED_TO|IN_CREATE|IN_DELETE|IN_DELETE_SELF|IN_MOVE_SELF) = 1
+openat(AT_FDCWD, "/var/lib/containers/storage/storage.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 8
+newfstatat(AT_FDCWD, "/run/containers/storage/overlay-layers", {st_mode=S_IFDIR|0700, st_size=80, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/var/lib/containers/storage/overlay-layers", {st_mode=S_IFDIR|0700, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/run/containers/storage/overlay-layers", {st_mode=S_IFDIR|0700, st_size=80, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/var/lib/containers/storage/overlay-layers", {st_mode=S_IFDIR|0700, st_size=4096, ...}, 0) = 0
+openat(AT_FDCWD, "/var/lib/containers/storage/overlay-layers/layers.json", O_RDONLY|O_CLOEXEC) = 9
+openat(AT_FDCWD, "/run/containers/storage/overlay-layers/mountpoints.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 9
+openat(AT_FDCWD, "/run/containers/storage/overlay-layers/mountpoints.json", O_RDONLY|O_CLOEXEC) = 10
+openat(AT_FDCWD, "/var/lib/containers/storage/storage.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 8
+openat(AT_FDCWD, "/var/lib/containers/storage/overlay-layers/layers.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 9
+openat(AT_FDCWD, "/run/containers/storage/overlay-layers/mountpoints.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 10
+newfstatat(AT_FDCWD, "/var/lib/containers/storage/overlay-layers/layers.json", {st_mode=S_IFREG|0600, st_size=10375, ...}, 0) = 0
+openat(AT_FDCWD, "/var/lib/containers/storage/overlay-layers/layers.json", O_RDONLY|O_CLOEXEC) = 10
+openat(AT_FDCWD, "/run/containers/storage/overlay-layers/mountpoints.lock", O_RDWR|O_CREAT|O_CLOEXEC, 0644) = 10
+openat(AT_FDCWD, "/run/containers/storage/overlay-layers/mountpoints.json", O_RDONLY|O_CLOEXEC) = 11
++++ exited with 0 +++
