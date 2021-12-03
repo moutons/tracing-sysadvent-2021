@@ -1,5 +1,7 @@
 # Least Privilege with Process Access Auditing
 
+TODO: slice and dice all these words. I tend to write almost oppressively verbosely until my own first editing pass, then cut liberally.
+
 In order that folks understand my thinking I will explain how I came to this topic before diving in, because otherwise I feel like this won't make a terrible lot of sense and with this context I feel like this article could provide more benefit.
 
 I no longer work there, but during the time I was working at Chef I fielded a request from someone who was asking how they could run an InSpec profile as a user other than root. I had a bit of a think about that one, because according to all the examples I'd seen, folks tend to run InSpec as a user with elevated privileges and Chef didn't provide any examples I could find about how to do it otherwise. This makes a certain amount of sense: InSpec (like many other tools in the "let's configure the entire system" and "let's audit the security of the entire system" spaces) needs to be able to interact with whatever the user decides they want to check against. Users can write arbitrary profile code for InSpec (or the open source CINC Auditor), ship those profiles around, and scan their systems to determine whether or not they're in compliance. While questions about the user privileges necessary to run Chef's kit (mostly all of Chef's product documentation at the time was written with the express assumption that many commands and processes must be run as root, in some cases another root-privilege user, or Administrator on Windows) had come up before, in this case I decided I'd heard "No, that's not possible at this time" enough and thought I'd file a feature request. Here was my thinking:
@@ -9,6 +11,8 @@ We should design a tool, whether that's a subcommand or a separate utility, whic
 Because there's a difference between what I think myself and what the company I work for determines, I let the user know the official answer, since they were a paying customer: that while it might be possible to use strace to determine what access was required so as to allow a profile to be run as a non-root user, there was no official support for that and that they'd be on their own.
 
 Some months later I got a response to the feature request that what I was requesting was not related to the product's functionality and the issue was closed.
+
+QUESTION: Is this context interesting or relevant? I suspect I should cut it down to maybe 2 paragraphs max.
 
 I've experienced a similar desire to my customer's before with different utilities, for example in 2012 when I was a sysadmin and the security department wanted to run some tool I'd never heard of to do security things on our boxes. Usually we'd get a request to install some vendor tool nobody'd ever heard of with root privileges, and nobody could tell us what all it'd be accessing, whether it would be able to make changes to the system, or how much network/cpu/disk it'd consume. So, being responsible system administrators, we'd say "no, absolutely not, tell us what it's going to be doing first" or "yes, we'll get that work scheduled" and then never schedule the work. That felt weird to me, that nobody including the vendor could tell us what all their tool would be doing, and I often thought about what could be done to address this.
 
@@ -104,13 +108,18 @@ root@trace1:strace-output# wc -l linux-vsp_files-accessed.txt
 
 So the full CentOS container running a little COBOL Hello World application needs access to six hundred thirty seven files, and CINC Auditor/InSpec running a 22-line profile directly on the OS needs to access over one hundred four thousand files. That doesn't directly mean that one is more or less of a security risk than the other, particularly given that a Hello World application can't report on the compliance state of your machines, containers, applications, et cetera, but it is fun to think about.
 
+TODO: super fun to remember what containers are actually doing via this output, isn't it?
+TODO: what can you do with this output in a pipeline
+TODO: call out processes which didn't access files - how do you dig into them?
+TODO: can one use this to run a profile without root? if not why does it matter?
+
 ## Parsing ebpftrace Output
 
 Again, [Julia Evans](https://jvns.ca/) has [written](https://jvns.ca/blog/2018/02/05/rust-bcc/) [about](https://jvns.ca/blog/2017/04/07/xdp-bpf-tutorial/) [eBPF](https://jvns.ca/blog/2017/06/28/notes-on-bpf---ebpf/) and you should read those posts as well as Brendan Gregg's posts because it's a lot to wrap your head around. 
 
 I've really only been looking at eBPF tooling in my spare time for the past month, I'd heard of it previously in different contexts but hadn't dug into it much so I don't know enough yet about how it could be used to attach to a particular process and follow it along during execution, rather than observe system behavior as a whole across a slice of time to enable system monitoring and performance observation. Still, it can be useful in this context so I'll write about it a bit.
 
-
+TODO: the rest of this material is on another machine, add it
 
 ## Closing thoughts
 
