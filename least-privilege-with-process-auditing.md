@@ -1,7 +1,5 @@
 # Least Privilege with Process Access Auditing
 
-First, thanks very much to Julia Evans, who is an inspirational writer. A note at the bottom of this article made me think "I should write something about solving this problem so I can be sure I learned something from it", and I think much of the technical documentation I read could be improved if written with 
-
 In order that folks understand my thinking I will explain how I came to this topic before diving in, because otherwise I feel like this won't make a terrible lot of sense and with this context I feel like this article could provide more benefit.
 
 I no longer work there, but during the time I was working at Chef I fielded a request from someone who was asking how they could run an InSpec profile as a user other than root. I had a bit of a think about that one, because according to all the examples I'd seen, folks tend to run InSpec as a user with elevated privileges and Chef didn't provide any examples I could find about how to do it otherwise. This makes a certain amount of sense: InSpec (like many other tools in the "let's configure the entire system" and "let's audit the security of the entire system" spaces) needs to be able to interact with whatever the user decides they want to check against. Users can write arbitrary profile code for InSpec (or the open source CINC Auditor), ship those profiles around, and scan their systems to determine whether or not they're in compliance. While questions about the user privileges necessary to run Chef's kit (mostly all of Chef's product documentation at the time was written with the express assumption that many commands and processes must be run as root, in some cases another root-privilege user, or Administrator on Windows) had come up before, in this case I decided I'd heard "No, that's not possible at this time" enough and thought I'd file a feature request. Here was my thinking:
@@ -59,19 +57,19 @@ cinc-auditor exec linux-vsp/
 
 You can see the full results of that command in the [`strace-output` directory](/strace-output/) in files matching the pattern `linux-vsp.*`, but I'll summarize what I see with some notes about what I understand cinc-auditor/inspec to be doing like so:
 
-[linux-vsp.109613](/strace-output/linux-vsp.109613) - this file shows all the omnibussed ruby files the `cinc-auditor` command tries to access in order to run its parent process
-[linux-vsp.109614](/strace-output/linux-vsp.109614) - why auditor is trying to run `cmd.exe` on a Linux system I don't yet know, you'll get used to seeing $PATH traversal very quickly
-[linux-vsp.109615](/strace-output/linux-vsp.109615) - I see a `Get-WmiObject Win32_OperatingSys` in there so we're checking to see if this is Windows
-[linux-vsp.109616](/strace-output/linux-vsp.109616) - more looking on the $PATH for `Get-WmiObject` so more Windows checking
-[linux-vsp.109617](/strace-output/linux-vsp.109617) - I am guessing that checking the $PATH for the `Select` command is more of the same
-[linux-vsp.109618](/strace-output/linux-vsp.109618) - Looking for and not finding `ConvertTo-Json`, this is a PowerShell cmdlet, right?
-[linux-vsp.109619](/strace-output/linux-vsp.109619) - Now we're getting somewhere on Linux, this running `uname -s` (with $PATH traversal info in there, see how used to this you are by now?)
-[linux-vsp.109620](/strace-output/linux-vsp.109620) - Now running `uname -m`
-[linux-vsp.109621](/strace-output/linux-vsp.109621) - Now running `test -f /etc/debian_version`
-[linux-vsp.109622](/strace-output/linux-vsp.109622) - Doing something with `/etc/lsb-release` but I didn't use the `-v` or `-s strsize` flags with strace so the command is truncated.
-[linux-vsp.109623](/strace-output/linux-vsp.109623) - Now we're just doing `cat /etc/lsb-release` using locale settings
-[linux-vsp.109624](/strace-output/linux-vsp.109624) - Checking for the `inetd` package
-[linux-vsp.109625](/strace-output/linux-vsp.109625) - Checking for the `auditd` package, its config directory `/etc/dpkg/dpkg.cfg.d`, and the config files `/etc/dpkg/dpkg.cfg`, and `/root/.dpkg.cfg`
+* [linux-vsp.109613](/strace-output/linux-vsp.109613) - this file shows all the omnibussed ruby files the `cinc-auditor` command tries to access in order to run its parent process
+* [linux-vsp.109614](/strace-output/linux-vsp.109614) - why auditor is trying to run `cmd.exe` on a Linux system I don't yet know, you'll get used to seeing $PATH traversal very quickly
+* [linux-vsp.109615](/strace-output/linux-vsp.109615) - I see a `Get-WmiObject Win32_OperatingSys` in there so we're checking to see if this is Windows
+* [linux-vsp.109616](/strace-output/linux-vsp.109616) - more looking on the $PATH for `Get-WmiObject` so more Windows checking
+* [linux-vsp.109617](/strace-output/linux-vsp.109617) - I am guessing that checking the $PATH for the `Select` command is more of the same
+* [linux-vsp.109618](/strace-output/linux-vsp.109618) - Looking for and not finding `ConvertTo-Json`, this is a PowerShell cmdlet, right?
+* [linux-vsp.109619](/strace-output/linux-vsp.109619) - Now we're getting somewhere on Linux, this running `uname -s` (with $PATH traversal info in there, see how used to this you are by now?)
+* [linux-vsp.109620](/strace-output/linux-vsp.109620) - Now running `uname -m`
+* [linux-vsp.109621](/strace-output/linux-vsp.109621) - Now running `test -f /etc/debian_version`
+* [linux-vsp.109622](/strace-output/linux-vsp.109622) - Doing something with `/etc/lsb-release` but I didn't use the `-v` or `-s strsize` flags with strace so the command is truncated.
+* [linux-vsp.109623](/strace-output/linux-vsp.109623) - Now we're just doing `cat /etc/lsb-release` using locale settings
+* [linux-vsp.109624](/strace-output/linux-vsp.109624) - Checking for the `inetd` package
+* [linux-vsp.109625](/strace-output/linux-vsp.109625) - Checking for the `auditd` package, its config directory `/etc/dpkg/dpkg.cfg.d`, and the config files `/etc/dpkg/dpkg.cfg`, and `/root/.dpkg.cfg`
 
 Moving from that to getting an idea of what all a non-root user would need to be able to access, we can do something like this in the strace-output directory ([explainshell here](https://explainshell.com/explain?cmd=find+.+-name+%22linux-vsp.10*%22+-exec+awk+-F+%27%22%27+%27%7Bprint+%242%7D%27+%7B%7D+%5C%3B+%7C+sort+-u+%3E+linux-vsp_files-accessed.txt)):
 
@@ -114,8 +112,10 @@ I've really only been looking at eBPF tooling in my spare time for the past mont
 
 
 
-## Thoughts on utility
+## Closing thoughts
 
 Over the past few years I've had a lot of thoughts about how do get things done, and I've come to the conclusion that it's okay to write shell scripts to get something like this done. All I'm doing is wrapping arbitrary tasks so I can extract information about what happens when they're running, and since I won't be able to predict where I'll need it I figured it was totally alright to use bash and awk since it's quite likely those will be available where I want to do this sort of thing.
 
 You might not agree, and wish to see something like this implemented in Ruby or Python or Rust (I have to admit that I thought about trying to do this using Rust so as to get better at it), and you're of course welcome to do so. Again, I chose shell since it's something many folks can easily run, look at, comprehend, modify, and re-implement in the way that suits them.
+
+Lastly, thanks very much to Julia Evans, who is an inspirational writer. A note at the bottom of this article made me think "I should write something about solving this problem so I can be sure I learned something from it", and I think much of the technical documentation I read could be improved if written with the mindset she brings to her writing.
