@@ -1,18 +1,19 @@
 # Least Privilege with Process Access Auditing
 
+// would help to start out with the what is it that you are going to talk about. I got really confused at looking at this as I was like, is this brain storming. 
+
 TODO: slice and dice all these words. I tend to write almost oppressively verbosely until my own first editing pass, then cut liberally.
 
 In order that folks understand my thinking I will explain how I came to this topic before diving in, because otherwise I feel like this won't make a terrible lot of sense and with this context I feel like this article could provide more benefit.
+// 
 
-I no longer work there, but during the time I was working at Chef I fielded a request from someone who was asking how they could run an InSpec profile as a user other than root. I had a bit of a think about that one, because according to all the examples I'd seen, folks tend to run InSpec as a user with elevated privileges and Chef didn't provide any examples I could find about how to do it otherwise. This makes a certain amount of sense: InSpec (like many other tools in the "let's configure the entire system" and "let's audit the security of the entire system" spaces) needs to be able to interact with whatever the user decides they want to check against. Users can write arbitrary profile code for InSpec (or the open source CINC Auditor), ship those profiles around, and scan their systems to determine whether or not they're in compliance. While questions about the user privileges necessary to run Chef's kit (mostly all of Chef's product documentation at the time was written with the express assumption that many commands and processes must be run as root, in some cases another root-privilege user, or Administrator on Windows) had come up before, in this case I decided I'd heard "No, that's not possible at this time" enough and thought I'd file a feature request. Here was my thinking:
+Security in software development is a current hot topic. A key premise is least privilege, in other words granting the minimum privileges necessary to ..Here's my thinking, we should design tools whether they are a subcommand or a separate utility that apply least privilege. I want to share my adventure of XXX to get least privilege with process access auditing. 
 
-We should design a tool, whether that's a subcommand or a separate utility, which wraps an InSpec run and parses out all the things that run accesses which are likely to be of interest to a corporate security department. Most likely that'd mean checking all the files which are accessed during the run, but could mean snagging network information as well.
+At my prior job working at Chef, I fielded a request asking how to run an InSpec profile as a user other than root. InSpec allows you to XXX, and generally is run with elevated privileges. All the examples I'd seen just leveraged these elevated privileges. At first glance, this makes a certain amount of sense: InSpec (like many other tools in the "let's configure the entire system" and "let's audit the security of the entire system" spaces) needs access to whatever the user decides they want to check against. Users can write arbitrary profile code for InSpec (or the open source CINC Auditor), ship those profiles around, and scan their systems to determine whether or not they're in compliance. Many questions about the user privileges necessary to run Chef's kit (mostly all of Chef's product documentation at the time was written with the express assumption that many commands and processes must be run as root, in some cases another root-privilege user, or Administrator on Windows) had come up before. I decided I'd heard "No, that's not possible at this time" enough and decided to file a feature request. 
 
-Because there's a difference between what I think myself and what the company I work for determines, I let the user know the official answer, since they were a paying customer: that while it might be possible to use strace to determine what access was required so as to allow a profile to be run as a non-root user, there was no official support for that and that they'd be on their own.
+Wrapping an InSpec run and parses out all the things that run accesses which are likely to be of interest to a corporate security department. Most likely that'd mean checking all the files which are accessed during the run, but could mean snagging network information as well.
 
-Some months later I got a response to the feature request that what I was requesting was not related to the product's functionality and the issue was closed.
-
-QUESTION: Is this context interesting or relevant? I suspect I should cut it down to maybe 2 paragraphs max.
+Because there's a difference between what I think is right and what the company I work for decides, I followed the official stance and informed the user that while it might be possible to use strace to determine what access was required so as to allow a profile to be run as a non-root user, there was no official support and that they'd be on their own.
 
 I've experienced a similar desire to my customer's before with different utilities, for example in 2012 when I was a sysadmin and the security department wanted to run some tool I'd never heard of to do security things on our boxes. Usually we'd get a request to install some vendor tool nobody'd ever heard of with root privileges, and nobody could tell us what all it'd be accessing, whether it would be able to make changes to the system, or how much network/cpu/disk it'd consume. So, being responsible system administrators, we'd say "no, absolutely not, tell us what it's going to be doing first" or "yes, we'll get that work scheduled" and then never schedule the work. That felt weird to me, that nobody including the vendor could tell us what all their tool would be doing, and I often thought about what could be done to address this.
 
@@ -29,7 +30,7 @@ Hopefully, seeing this work will help you solve a problem in your environment or
 
 ## Parsing strace Output for an CINC Auditor (InSpec) profile
 
-There have been much better write-ups of strace functionality than I will be able to get into here, [I'll point to Julia Evans' work](https://jvns.ca/categories/strace/) to get you started if you need more than what I'll write here.
+There are other write-ups of strace functionality that go in depth, for example [I'll point to Julia Evans' work](https://jvns.ca/categories/strace/) to get you started if you need more.
 
 Strace is the venerable Linux debugger, and a good tool to use when coming up against a "what's going on when this program runs" problem. However, its output can be decidedly unfriendly. Take a look in the [`strace-output` directory in this repo](/strace-output) for the files matching the pattern `linux-baseline.*` to see the output of the following command:
 
