@@ -75,7 +75,7 @@ find . -name "linux-vsp.10*" -exec awk -F '"' '{print $2}' {} \; | sort -u > lin
 
 You can see the [output of this command here](/strace-output/linux-vsp_files-accessed.txt), but you'll need to interpret some of the output from the perspective of the program being executed. For example, I see "Gemfile" in there without a preceding path. I expect that's Auditor looking in the `./linux-vsp` directory where the profile being called exists, and the other entries without a preceding path are probably also relative to the command being executed.
 
-## Parsing strace output of a container execution
+## Parsing strace output of a container execut
 
 I said Docker earlier, but I've got podman installed on this machine so that's what the output will reflect. You can find the output of the following command in the `strace-output` [directory](/strace-output/) in files matching the pattern `container_cobol.*`, and wow. Turns out running a full CentOS container produces a lot of output. When scanning through the files, you see what looks like podman doing podman things, and what looks like the COBOL Hello World application executing in the container. As I go through these files I will call out anything particularly interesting I see along the way:
 
