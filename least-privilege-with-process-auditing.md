@@ -75,7 +75,7 @@ You can see the full results of that command in the [`strace-output` directory](
 * [linux-vsp.109624](/strace-output/linux-vsp.109624) - Checking for the `inetd` package
 * [linux-vsp.109625](/strace-output/linux-vsp.109625) - Checking for the `auditd` package, its config directory `/etc/dpkg/dpkg.cfg.d`, and the config files `/etc/dpkg/dpkg.cfg`, and `/root/.dpkg.cfg`
 
-Moving from that to getting an idea of what all a non-root user would need to be able to access, we can do something like this in the strace-output directory ([explainshell here](https://explainshell.com/explain?cmd=find+.+-name+%22linux-vsp.10*%22+-exec+awk+-F+%27%22%27+%27%7Bprint+%242%7D%27+%7B%7D+%5C%3B+%7C+sort+-u+%3E+linux-vsp_files-accessed.txt)):
+Moving from that to getting an idea of what all a non-root user would need to be able to access, you can do something like this in the strace-output directory ([explainshell here](https://explainshell.com/explain?cmd=find+.+-name+%22linux-vsp.10*%22+-exec+awk+-F+%27%22%27+%27%7Bprint+%242%7D%27+%7B%7D+%5C%3B+%7C+sort+-u+%3E+linux-vsp_files-accessed.txt)):
 
 ```
 find . -name "linux-vsp.10*" -exec awk -F '"' '{print $2}' {} \; | sort -u > linux-vsp_files-accessed.txt
@@ -85,7 +85,7 @@ You can see the [output of this command here](/strace-output/linux-vsp_files-acc
 
 ## Parsing strace output of a container execution
 
-I said Docker earlier, but I've got podman installed on this machine so that's what the output will reflect. Honestly, it doesn't take much to find out that perhaps I've bitten off more than I want to chew through for what should be a short Sysadvent article, but it's interesting so here goes. You can find the output of the following command in the `strace-output` directory in files matching the pattern `container_cobol.*`, and wow. Turns out running a full CentOS container produces a lot of output. I'll scan through the files to see what looks like podman doing podman things, and what looks like the COBOL Hello World application executing in the container, and call out anything particularly interesting I see along the way:
+I said Docker earlier, but I've got podman installed on this machine so that's what the output will reflect. You can find the output of the following command in the `strace-output` directory in files matching the pattern `container_cobol.*`, and wow. Turns out running a full CentOS container produces a lot of output. I scan through the files to see what looks like podman doing podman things, and what looks like the COBOL Hello World application executing in the container, and call out anything particularly interesting I see along the way:
 
 ```
 root@trace1:~# strace -ff --trace=%file -o /root/container_cobol podman run -it container_cobol
@@ -106,7 +106,7 @@ root@trace1:strace-output# wc -l linux-vsp_files-accessed.txt
 104754 linux-vsp_files-accessed.txt
 ```
 
-So the full CentOS container running a little COBOL Hello World application needs access to six hundred thirty seven files, and CINC Auditor/InSpec running a 22-line profile directly on the OS needs to access over one hundred four thousand files. That doesn't directly mean that one is more or less of a security risk than the other, particularly given that a Hello World application can't report on the compliance state of your machines, containers, applications, et cetera, but it is fun to think about.
+So the full CentOS container running a little COBOL Hello World application needs access to six hundred thirty seven files, and CINC Auditor/InSpec running a 22-line profile directly on the OS needs to access over one hundred four thousand files. That doesn't directly mean that one is more or less of a security risk than the other, particularly given that a Hello World application can't report on the compliance state of your machines, containers, or applications for example, but it is fun to think about.
 
 TODO: super fun to remember what containers are actually doing via this output, isn't it?
 
@@ -118,7 +118,7 @@ TODO: can one use this to run a profile without root? if not why does it matter?
 
 ## Parsing ebpftrace Output
 
-Again, [Julia Evans](https://jvns.ca/) has [written](https://jvns.ca/blog/2018/02/05/rust-bcc/) [about](https://jvns.ca/blog/2017/04/07/xdp-bpf-tutorial/) [eBPF](https://jvns.ca/blog/2017/06/28/notes-on-bpf---ebpf/) and you should read those posts as well as Brendan Gregg's posts because it's a lot to wrap your head around. 
+[Julia Evans](https://jvns.ca/) has [written](https://jvns.ca/blog/2018/02/05/rust-bcc/) [about](https://jvns.ca/blog/2017/04/07/xdp-bpf-tutorial/) [eBPF](https://jvns.ca/blog/2017/06/28/notes-on-bpf---ebpf/) too, and you should read those posts in addition to Brendan Gregg's posts.
 
 I've really only been looking at eBPF tooling in my spare time for the past month, I'd heard of it previously in different contexts but hadn't dug into it much so I don't know enough yet about how it could be used to attach to a particular process and follow it along during execution, rather than observe system behavior as a whole across a slice of time to enable system monitoring and performance observation. Still, it can be useful in this context so I'll write about it a bit.
 
