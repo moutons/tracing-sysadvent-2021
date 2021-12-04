@@ -1,36 +1,27 @@
 # Least Privilege with Process Access Auditing
 
-// would help to start out with the what is it that you are going to talk about. I got really confused at looking at this as I was like, is this brain storming. 
+Security in software development has been a hot-button issue for years. Increasing awareness of the threat posed by supply chain breaches have only increased the pressure on teams to improve security in all aspects of the software delivery and operation. A key premise is least privilege: granting the minimum privileges necessary to accomplish a task, in order to prevent folks from accessing or altering things they shouldn't have rights to. Here's my thinking, we should design tools whether they are a subcommand or a separate utility that apply least privilege. I would like to share my adventure of looking at an InSpec profile (using CINC Auditor) and a container I found on Docker Hub to demonstrate how to apply least privilege using process access auditing.
 
-TODO: slice and dice all these words. I tend to write almost oppressively verbosely until my own first editing pass, then cut liberally.
+At my prior job working at Chef, I fielded a request asking how to run an InSpec profile as a user other than root. InSpec allows you to write policies in code (called InSpec Profiles) to audit the state of a system. Most of the documentation and practice at the time had users running InSpec as root or a root-equivalent user. At first glance, this makes a certain amount of sense: InSpec (like many other tools in the "let's configure the entire system" and "let's audit the security of the entire system" spaces) needs access to whatever the user decides they want to check against. Users can write arbitrary profile code for InSpec (and now the open source CINC Auditor), ship those profiles around, and scan their systems to determine whether or not they're in compliance.
 
-In order that folks understand my thinking I will explain how I came to this topic before diving in, because otherwise I feel like this won't make a terrible lot of sense and with this context I feel like this article could provide more benefit.
-// 
+I've experienced this pain of excessive privileges with utilities myself. I can't count the number of times we'd get a request to install some vendor tool nobody had ever heard of with root privileges. Nobody who asked could tell us what it'd be accessing, whether it would be able to make changes to the system, or how much network/cpu/disk it'd consume. The vendor and the security department or DBAs or whoever would file a request with the expectation that we should just trust their assertion that nothing would go wrong. So, being responsible system administrators, we'd say "no, absolutely not, tell us what it's going to be doing first" or "yes, we'll get that work scheduled" and then never schedule the work. This put us in the position of being poor actors in the system, and while justified it never sat right with me.
 
-Security in software development is a current hot topic. A key premise is least privilege, in other words granting the minimum privileges necessary to ..Here's my thinking, we should design tools whether they are a subcommand or a separate utility that apply least privilege. I want to share my adventure of XXX to show you one method to use least privilege with process access auditing. 
+(Note: It is deeply strange that vendors often can't tell customers what their tools do when asked in good faith, as is the idea that there should be an assumption of trustworthiness in that lack of information.)
 
-At my prior job working at Chef, I fielded a request asking how to run an InSpec profile as a user other than root. InSpec allows you to XXX, and generally is run with elevated privileges. All the examples I'd seen just leveraged these elevated privileges. At first glance, this makes a certain amount of sense: InSpec (like many other tools in the "let's configure the entire system" and "let's audit the security of the entire system" spaces) needs access to whatever the user decides they want to check against. Users can write arbitrary profile code for InSpec (or the open source CINC Auditor), ship those profiles around, and scan their systems to determine whether or not they're in compliance. Many questions about the user privileges necessary to run Chef's kit (mostly all of Chef's product documentation at the time was written with the express assumption that many commands and processes must be run as root, in some cases another root-privilege user, or Administrator on Windows) had come up before. I decided I'd heard "No, that's not possible at this time" enough and decided to file a feature request. 
+I've found some tools over the years which might be able to give a user output which can be used to help craft something like a set of required privileges to run an arbitrary program with non-root privileges. Not too long ago I discussed "securing the supply chain" on how to design an ingestion pipeline to enable folks to run containers in a secure environment where they could be somewhat assured that a container using code they didn't write wasn't going to try to access things that they weren't comfortable with. I thought about this old desire of limiting privileges when running an arbitrary command, and figured that I should do a little digging to see if something already existed. If not maybe I could work towards a solution.
 
-Wrapping an InSpec run and parses out all the things that run accesses which are likely to be of interest to a corporate security department. Most likely that'd mean checking all the files which are accessed during the run, but could mean snagging network information as well.
+Now, I don't consider myself an expert developer but I have been writing or debugging code in one form or another since the '90s. I hope you consider this demo code with the expectation that someone wanting to do this in a production environment will re-implement what I've done far more elegantly. I hope that seeing my thinking and the work will help folks to understand a bit more about what's going on behind the scenes when you run arbitrary code, and to help you design better methods of securing your environment using that knowledge.
 
-Because there's a difference between what I think is right and what the company I work for decides, I followed the official stance and informed the user that while it might be possible to use strace to determine what access was required so as to allow a profile to be run as a non-root user, there was no official support and that they'd be on their own.
-
-Here's the thing; I've experienced this pain of excessive privileges with different utilities, for example in 2012 when I was a sysadmin and the security department wanted to run some tool I'd never heard of to do security things on our boxes. We'd get a request to install some vendor tool nobody had ever heard of with root privileges, and nobody could tell us what it'd be accessing, whether it would be able to make changes to the system, or how much network/cpu/disk it'd consume with the expectation that we should just trust that nothing would go wrong. So, being responsible system administrators, we'd say "no, absolutely not, tell us what it's going to be doing first" or "yes, we'll get that work scheduled" and then never schedule the work. (Note: It is weird that vendors can't tell customers what their tools precisely do and that there should be an assumption of trust.)
-
-I've found some tools over the years which might be able to give a user output which can be used to help craft something like a set of required privileges to run an arbitrary program with non-root privileges. Not too long ago I discussed "securing the supply chain" on how to design an ingestion pipeline to enable folks to run containers in a secure environment where they could be somewhat assured that a container using code they didn't write wasn't going to try to access things that they weren't comfortable with. I thought about this old desire of limiting privileges when running an arbitrary command, and figured that I should do a little digging to see if something already existed. If not maybe I could write up a bit of a tool.
-
-Now, I don't consider myself an expert, but I have been writing or debugging code in one form or another since the '90s. I don't have a lot of practice in this millennium and consider this demo code with the expectation that someone wanting to do this in a production environment will re-implement what I've done far more elegantly - I hope that seeing my thinking and the work will help folks to understand a bit more about what's going on behind the scenes when you run arbitrary code, and to help you design better methods of securing your environment using that knowledge.
-
-What I'll be showing here is the use of strace and some of the tools built on eBPF, to build a picture of what is going on when you run code and how to approach crafting a baseline of expected system behavior using the information you can gather. I'll show two examples:
+What I'll be showing here is the use of strace and some of the tools built on eBPF to build a picture of what is going on when you run code and how to approach crafting a baseline of expected system behavior using the information you can gather. I'll show two examples:
 
 * executing a relatively simple InSpec profile using the open source distribution's CINC Auditor, and 
 * running a randomly selected container off Docker Hub (jjasghar/container_cobol).
 
 Hopefully, seeing this work will help you solve a problem in your environment or avoid some compliance pain.
 
-## Parsing strace Output for an CINC Auditor (InSpec) profile
+## Parsing strace Output for an CINC Auditor (Chef InSpec) profile
 
-There are other write-ups of strace functionality that go in depth, for example [I'll point to Julia Evans' work](https://jvns.ca/categories/strace/) to get you started if you need more.
+There are other write-ups of strace functionality which go into broader and deeper detail on what's possible using it, [I'll point to Julia Evans' work](https://jvns.ca/categories/strace/) to get you started if you want to know more.
 
 Strace is the venerable Linux debugger, and a good tool to use when coming up against a "what's going on when this program runs" problem. However, its output can be decidedly unfriendly. Take a look in the [`strace-output` directory in this repo](/strace-output) for the files matching the pattern `linux-baseline.*` to see the output of the following command:
 
@@ -84,9 +75,9 @@ find . -name "linux-vsp.10*" -exec awk -F '"' '{print $2}' {} \; | sort -u > lin
 
 You can see the [output of this command here](/strace-output/linux-vsp_files-accessed.txt), but you'll need to interpret some of the output from the perspective of the program being executed. For example, I see "Gemfile" in there without a preceding path. I expect that's Auditor looking in the `./linux-vsp` directory where the profile being called exists, and the other entries without a preceding path are probably also relative to the command being executed.
 
-## Parsing strace output of a container execution
+## Parsing strace output of a container execut
 
-I said Docker earlier, but I've got podman installed on this machine so that's what the output will reflect. You can find the output of the following command in the `strace-output` directory in files matching the pattern `container_cobol.*`, and wow. Turns out running a full CentOS container produces a lot of output. I scan through the files to see what looks like podman doing podman things, and what looks like the COBOL Hello World application executing in the container, and call out anything particularly interesting I see along the way:
+I said Docker earlier, but I've got podman installed on this machine so that's what the output will reflect. You can find the output of the following command in the `strace-output` [directory](/strace-output/) in files matching the pattern `container_cobol.*`, and wow. Turns out running a full CentOS container produces a lot of output. When scanning through the files, you see what looks like podman doing podman things, and what looks like the COBOL Hello World application executing in the container. As I go through these files I will call out anything particularly interesting I see along the way:
 
 ```
 root@trace1:~# strace -ff --trace=%file -o /root/container_cobol podman run -it container_cobol
@@ -107,23 +98,129 @@ root@trace1:strace-output# wc -l linux-vsp_files-accessed.txt
 104754 linux-vsp_files-accessed.txt
 ```
 
-So the full CentOS container running a little COBOL Hello World application needs access to six hundred thirty seven files, and CINC Auditor/InSpec running a 22-line profile directly on the OS needs to access over one hundred four thousand files. That doesn't directly mean that one is more or less of a security risk than the other, particularly given that a Hello World application can't report on the compliance state of your machines, containers, or applications for example, but it is fun to think about.
+So the full CentOS container running a little COBOL Hello World application needs access to six hundred thirty seven files, and CINC Auditor/InSpec running a 22-line profile directly on the OS needs to access over one hundred four thousand files. That doesn't directly mean that one is more or less of a security risk than the other, particularly given that a Hello World application can't report on the compliance state of your machines, containers, or applications for example, but it is fun to think about. One of the neatest things about debugging using tools which expose the underlying operations of a container exec is that you can reason about what containerization is actually doing. In this case, since we're showing what files are accessed during the container exec, sorting the list, and removing duplicate entries it's a cursory view but still useful.
 
-TODO: super fun to remember what containers are actually doing via this output, isn't it?
+Let's say we're consuming a vendor application as a container. We can trace an execution (or sample a running instance of the container for a day, strace can attach to running processes), load the list of files into the pipeline we use to promote new versions of that vendor app to prod, and when we see a change in the files that the application is opening we can make a determination whether the behavior of the new version is appropriate for our production environment with all the PII and user financial data. Now, instead of trusting the vendor at their word that they've done their due diligence, we're actually observing the behavior of the application and using our own knowledge of our environment to say whether that application is suitable for use.
 
-TODO: what can you do with this output in a pipeline
+## But wait! Strace isn't just for files!
 
-TODO: call out processes which didn't access files - how do you dig into them?
+I used strace's `file` syscall filter as an example because it fit the example use case, but strace can snoop on other syscalls too! Do you need to know what IP addresses your process knows about? This example is using a container exec again, but you could snoop on an existing pid if you want then run a similar search against the output (IPs have been modified in this output):
 
-TODO: can one use this to run a profile without root? if not why does it matter?
+```
+strace -ff --trace=%network -o /root/yourcontainer-network -s 10241 podman run -it yourcontainer
+for file in $(ls -1 yourcontainer-network.*); do grep -oP 'inet_addr\("\K[^"]+' $file ; done
+127.0.0.1
+127.0.0.1
+693.18.119.36
+693.18.119.36
+693.18.131.255
+75.5117.0.5
+75.5117.0.5
+75.5117.255.255
+161.888.0.2
+161.888.0.2
+161.888.15.255
+832.71.40.1
+832.71.40.1
+832.71.255.255
+```
+
+## Strace closing thoughts
+
+With all that knowledge, can we address the original question: Can one use the list of files output by InSpec to provide a restricted set of permissions which will allow one to audit the system using CINC Auditor and the profile with a standard user?
+
+Yes, with one caveat: My Very Simple Profile was too simple, and didn't require any additional privileges. I tried with a few other public profiles, but every one I tried ran successfully using a standard user created with `useradd -m cincauditor`. I looked through bug reports related to running profiles as a non-root user but couldn't replicate their issues - which is good, I suppose. It could be that the issue my customer was facing at the time was a bug in the program's behavior when run as a non-root user which has been fixed, or I just don't remember the use case they presented well enough to replicate it. So here's a manufactured case:
+
+```
+root@trace1:~# mkdir /tmp/foo
+root@trace1:~# touch /tmp/foo/sixhundred
+root@trace1:~# touch /tmp/foo/sevenhundred
+root@trace1:~# chmod 700 /tmp/foo
+root@trace1:~# chmod 600 /tmp/foo/sixhundred
+root@trace1:~# chmod 700 /tmp/foo/sevenhundred
+cincauditor@trace1:~$ cat << EOF > linux-vsp/controls/filetest.rb
+> control "filetester" do
+>   impact 1.0
+>   title "Testing files"
+>   desc "Ensure they're owned by root"
+>   describe file('/tmp/foo/sixhundred') do
+>     its('owner') { should eq 'root' }
+>   end
+>   describe file('/tmp/foo/sevenhundred') do
+>     its('group') { should eq 'root'}
+>   end
+> end
+> EOF
+cincauditor@trace1:~$ cinc-auditor exec linux-vsp/
+
+Profile: Very Simple Profile (linux-vsp)
+Version: 0.1.0
+Target:  local://
+
+  ×  filetester: Testing files (2 failed)
+     ×  File /tmp/foo/sixhundred owner is expected to eq "root"
+
+     expected: "root"
+          got: nil
+
+     (compared using ==)
+
+     ×  File /tmp/foo/sevenhundred group is expected to eq "root"
+
+     expected: "root"
+          got: nil
+
+     (compared using ==)
+
+  ✔  inetd: Do not install inetd
+     ✔  System Package inetd is expected not to be installed
+  ↺  auditd: Check auditd configuration (1 skipped)
+     ✔  System Package auditd is expected to be installed
+     ↺  Can't find file: /etc/audit/auditd.conf
+
+
+Profile Summary: 1 successful control, 1 control failure, 1 control skipped
+Test Summary: 2 successful, 2 failures, 1 skipped
+
+cincauditor@trace1:~$ find . -name "linux-vsp.1*" -exec awk -F '"' '{print $2}' {} \; | sort -u > linux-vsp_files-accessed.txt
+
+root@trace1:~# diff --suppress-common-lines -y linux-vsp_files-accessed.txt /home/cincauditor/linux-vsp_files-accessed.txt | grep -v /opt/cinc-auditor
+							      >	/home
+							      >	/home/cincauditor
+							      >	/home/cincauditor/.dpkg.cfg
+							      >	/home/cincauditor/.gem/ruby/2.7.0
+							      >	/home/cincauditor/.gem/ruby/2.7.0/specifications
+							      >	/home/cincauditor/.inspec
+							      >	/home/cincauditor/.inspec/cache
+							      >	/home/cincauditor/.inspec/config.json
+							      >	/home/cincauditor/.inspec/gems/2.7.0/specifications
+							      >	/home/cincauditor/.inspec/plugins
+							      >	/home/cincauditor/.inspec/plugins.json
+							      >	/home/cincauditor/linux-vsp
+/root							      <
+/root/.dpkg.cfg						      <
+/root/.gem/ruby/2.7.0					      <
+/root/.gem/ruby/2.7.0/specifications			      <
+/root/.inspec						      <
+/root/.inspec/cache					      <
+/root/.inspec/config.json				      <
+/root/.inspec/gems/2.7.0/specifications			      <
+/root/.inspec/plugins					      <
+/root/.inspec/plugins.json				      <
+/root/linux-vsp						      <
+							      >	/tmp/foo/sevenhundred
+							      >	/tmp/foo/sixhundred
+							      >	linux-vsp/controls/filetest.rb
+root@trace1:~#
+```
+
+The end of that previous block's output shows compiling the list of files accessed when the `cincauditor` user runs the profile in the same way we did for the `root` user, then a diff of the two files. Looking at that output, it's fairly obvious that the profile is trying to access the newly created files which are in a directory we made inaccessible to the `cincauditor` user (with `chmod 700 /tmp/foo`), and when we give cinc-auditor access to that directory with `chmod 750 /tmp/foo` the profile is able to check those files. A manufactured replication of the use case, but it does show that it's possible to use the output to accomplish the task. Whether chmod is the right way to give an least-privilege user access to the files is a question best left up to the implementor, their organization, and their auditors - the purpose of this exercise is to demonstrate the potential value of the strace debugger. 
 
 ## Parsing ebpftrace Output
 
-[Julia Evans](https://jvns.ca/) has [written](https://jvns.ca/blog/2018/02/05/rust-bcc/) [about](https://jvns.ca/blog/2017/04/07/xdp-bpf-tutorial/) [eBPF](https://jvns.ca/blog/2017/06/28/notes-on-bpf---ebpf/) too, and you should read those posts in addition to Brendan Gregg's posts.
+[Julia Evans](https://jvns.ca/) has [written](https://jvns.ca/blog/2018/02/05/rust-bcc/) [about](https://jvns.ca/blog/2017/04/07/xdp-bpf-tutorial/) [eBPF](https://jvns.ca/blog/2017/06/28/notes-on-bpf---ebpf/) too, and you should read those posts in addition to [Brendan Gregg's posts on eBPF](https://www.brendangregg.com/ebpf.html) to build your own understanding about this very complex set of tooling.
 
-I've really only been looking at eBPF tooling in my spare time for the past month, I'd heard of it previously in different contexts but hadn't dug into it much so I don't know enough yet about how it could be used to attach to a particular process and follow it along during execution, rather than observe system behavior as a whole across a slice of time to enable system monitoring and performance observation. Still, it can be useful in this context so I'll write about it a bit.
-
-TODO: the rest of this material is on another machine, add it
+Prior to considering it for this article, I'd heard of eBPF in platform observability contexts but hadn't dug into it much. With regard to single-process-and-child tracing I have not yet built a functional implementation. However, when considering the ability to build a baseline picture of system behavior and being able to surface potential issues, the performance impact of eBPF tooling is preferable to `strace` and its kin.
 
 ## Closing thoughts
 
@@ -131,4 +228,4 @@ Over the past few years I've had a lot of thoughts about how do get things done,
 
 You might not agree, and wish to see something like this implemented in Ruby or Python or Rust (I have to admit that I thought about trying to do this using Rust so as to get better at it), and you're of course welcome to do so. Again, I chose shell since it's something many folks can easily run, look at, comprehend, modify, and re-implement in the way that suits them.
 
-Lastly, thanks very much to Julia Evans, who is an inspirational writer. A note at the bottom of this article made me think "I should write something about solving this problem so I can be sure I learned something from it", and I think much of the technical documentation I read could be improved if written with the mindset she brings to her writing.
+Lastly, thanks very much to Julia Evans. A note about the power of storytelling in one of her posts made me think "I should write a story about solving this problem so I can be sure I learned something from it", and I think much of the technical documentation I read could be improved if written with the mindset she brings to her writing.
