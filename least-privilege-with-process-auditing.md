@@ -12,7 +12,7 @@ I've found some tools over the years which might be able to give a user output w
 
 Now, I don't consider myself an expert developer but I have been writing or debugging code in one form or another since the '90s. I hope you consider this demo code with the expectation that someone wanting to do this in a production environment will re-implement what I've done far more elegantly. I hope that seeing my thinking and the work will help folks to understand a bit more about what's going on behind the scenes when you run arbitrary code, and to help you design better methods of securing your environment using that knowledge.
 
-What I'll be showing here is the use of strace and some of the tools built on eBPF to build a picture of what is going on when you run code and how to approach crafting a baseline of expected system behavior using the information you can gather. I'll show two examples:
+What I'll be showing here is the use of strace to build a picture of what is going on when you run code and how to approach crafting a baseline of expected system behavior using the information you can gather. I'll show two examples:
 
 * executing a relatively simple InSpec profile using the open source distribution's CINC Auditor, and 
 * running a randomly selected container off Docker Hub (jjasghar/container_cobol).
@@ -214,13 +214,7 @@ root@trace1:~# diff --suppress-common-lines -y linux-vsp_files-accessed.txt /hom
 root@trace1:~#
 ```
 
-The end of that previous block's output shows compiling the list of files accessed when the `cincauditor` user runs the profile in the same way we did for the `root` user, then a diff of the two files. Looking at that output, it's fairly obvious that the profile is trying to access the newly created files which are in a directory we made inaccessible to the `cincauditor` user (with `chmod 700 /tmp/foo`), and when we give cinc-auditor access to that directory with `chmod 750 /tmp/foo` the profile is able to check those files. A manufactured replication of the use case, but it does show that it's possible to use the output to accomplish the task. Whether chmod is the right way to give an least-privilege user access to the files is a question best left up to the implementor, their organization, and their auditors - the purpose of this exercise is to demonstrate the potential value of the strace debugger. 
-
-## Parsing ebpftrace Output
-
-[Julia Evans](https://jvns.ca/) has [written](https://jvns.ca/blog/2018/02/05/rust-bcc/) [about](https://jvns.ca/blog/2017/04/07/xdp-bpf-tutorial/) [eBPF](https://jvns.ca/blog/2017/06/28/notes-on-bpf---ebpf/) too, and you should read those posts in addition to [Brendan Gregg's posts on eBPF](https://www.brendangregg.com/ebpf.html) to build your own understanding about this very complex set of tooling.
-
-Prior to considering it for this article, I'd heard of eBPF in platform observability contexts but hadn't dug into it much. With regard to single-process-and-child tracing I have not yet built a functional implementation. However, when considering the ability to build a baseline picture of system behavior and being able to surface potential issues, the performance impact of eBPF tooling is preferable to `strace` and its kin.
+The end of that previous block's output shows compiling the list of files accessed when the `cincauditor` user runs the profile in the same way we did for the `root` user, then a diff of the two files. Looking at that output, it's fairly obvious that the profile is trying to access the newly created files which are in a directory we made inaccessible to the `cincauditor` user (with `chmod 700 /tmp/foo`), and when we give cinc-auditor access to that directory with `chmod 750 /tmp/foo` the profile is able to check those files. A manufactured replication of the use case, but it does show that it's possible to use the output to accomplish the task. Whether chmod is the right way to give an least-privilege user access to the files is a question best left up to the implementor, their organization, and their auditors - the purpose of this exercise is to demonstrate the potential value of the strace debugger.
 
 ## Closing thoughts
 
