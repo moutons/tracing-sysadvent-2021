@@ -53,13 +53,13 @@ awk -F '"' '{print $2}' linux-baseline/linux-baseline.108579 | sort -uR | head
 /opt/cinc-auditor/embedded/lib/ruby/gems/2.7.0/gems/aws-sdk-ram-1.26.0/lib/rubygems/resolver/current_set.rb
 ```
 
-You can start to build a picture of what all the user would need to be able to access in order to run a profile based on that output, but in order to go further I'll use a [much more simple check](/linux-vsp/), like so:
+You can start to build a picture of what all the user would need to be able to access in order to run a profile based on that output, but in order to go further I'll use a [much more simple check](/linux-vsp/):
 
 ```
 cinc-auditor exec linux-vsp/
 ```
 
-You can see the full results of that command in the [`strace-output` directory](/strace-output/) in files matching the pattern `linux-vsp.*`, but I'll summarize what I see with some notes about what I understand cinc-auditor/inspec to be doing like so:
+Full results of that command are located in the [`strace-output` directory](/strace-output/) with files matching the pattern `linux-vsp.*`, but to summarize  what cinc-auditor/inspec is doing:
 
 * [linux-vsp.109613](/strace-output/linux-vsp.109613) - this file shows all the omnibussed ruby files the `cinc-auditor` command tries to access in order to run its parent process
 * [linux-vsp.109614](/strace-output/linux-vsp.109614) - why auditor is trying to run `cmd.exe` on a Linux system I don't yet know, you'll get used to seeing $PATH traversal very quickly
